@@ -1,5 +1,5 @@
 <HTML>
-<!--This file created 10/16/00 11:32 AM by Claris Home Page version 3.0-->
+<!--This file created 10/16/00 1:06 PM by Claris Home Page version 3.0-->
 <HEAD>
    <TITLE>EE381K Guest Lecture</TITLE>
    <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
@@ -26,10 +26,9 @@
    <P>If s(<B>x</B>,t) represents a signal that is a function of
    spatial position <B>x</B> and time t, taking the continuous 4-D
    Fourier transform gives the wavenumber-frequency spectrum
-   S(<B>k</B>,<FONT FACE="Symbol">w</FONT>). The variable
-   <FONT FACE="Symbol">w</FONT> represents temporal frequency, and
-   the wavenumber vector <B>k</B> represents the spatial
-   frequency.</P>
+   S(<B>k</B>,<FONT FACE="Symbol">w</FONT>). The wavenumber vector
+   <B>k</B> represents the spatial frequency, and the variable
+   <FONT FACE="Symbol">w</FONT> represents temporal frequency.</P>
    
    <P>We observe that any signal can be decomposed into a
    superposition of propagating plane waves, where elemental signals
@@ -49,11 +48,12 @@
    <P>Now e(<B>x</B>,t) can be interpreted as a plane wave
    propagating in the <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>
    direction with a speed equal to 1 / | <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>
-   |.</P>
+   |. The vector <FONT FACE="Symbol"><B>a</B></FONT> is sometimes
+   called the "slowness vector".</P>
    
-   <P>Time- and frequency-domain filters can be designed using this
-   approach, the signal s(<B>x</B>,t) is not known for all
-   positions.</P></BLOCKQUOTE>
+   <P>Multidimensional time- and frequency-domain filters can be
+   designed using this approach. However, the signal s(<B>x</B>,t) is
+   not generally known for all positions.</P></BLOCKQUOTE>
 
 <H1><CENTER>Continuous-time beamforming</CENTER></H1>
 
@@ -136,8 +136,8 @@
    
    <H2><CENTER>The Receiver Weighting Function</CENTER></H2>
    
-   <P>Also notice that the response is very close to sinc(
-   NDk<SUB>x</SUB>/ 2<FONT FACE="Symbol">p</FONT>). It is in fact,
+   <P>Also notice that the response is similar to sinc(
+   NDk<SUB>x</SUB>/ 2<FONT FACE="Symbol">p</FONT>). It is, in fact,
    the frequency response of a 1-D comb filter of length N. This
    demonstrates the effect of the receiver weighting (also called
    shading) on the shape of the array pattern -- it is equivalent to
