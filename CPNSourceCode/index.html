@@ -1,0 +1,68 @@
+<HTML>
+<!--This file created by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>Process Network Source Code</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+   <X-CLARIS-WINDOW TOP=41 BOTTOM=956 LEFT=11 RIGHT=613>
+   <X-CLARIS-REMOTESAVE SERVER=syrinx USER=gallen DIR="Documents/public_html/" FILE="index.html">
+   <X-CLARIS-TAGVIEW MODE=minimal>
+</HEAD>
+<BODY BACKGROUND="Graphics/LonghornPattern.gif">
+<CENTER><IMG SRC="../Graphics/warning.gif" WIDTH=488 HEIGHT=11 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+
+<H1><CENTER>Computational Process Networks Source Code</CENTER></H1>
+
+<CENTER><IMG SRC="../Graphics/warning.gif" WIDTH=488 HEIGHT=11 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom>
+
+<P>We use <A HREF="http://www.arlut.utexas.edu/~jmake/">jmake</A>, an
+automated, multi-platform build tool. You'll need it,
+too.</P></CENTER>
+
+<BLOCKQUOTE>A core component of the Computational Process Network
+   framework is the <A HREF="Pthread.tar.gz">Pthread class
+   library</A>. It is developed on Sun Solaris, and runs (or has run)
+   on many other platforms. These platforms include Linux, LinuxPPC,
+   AIX, IRIX, MercuryOS, and MacOS X DP3. Other platforms which
+   support POSIX Pthreads should also work with minimal effort.
+   
+   <P>The <A HREF="CPNSample.tgz">Computational Process Network
+   Sample code</A> contains the Pthread library. It contains a simple
+   program which demonstrates the use of the Computational Process
+   Network framework, while attempting to test it. Currently, it has
+   only been tested on Solaris, Linux, and LinuxPPC (but may work on
+   others).</P>
+   
+   <P>3/22/00 - This version has had a significant rewrite, with the
+   following features:</P>
+   
+   <UL>
+      <LI>improved portability</LI>
+      
+      <LI>the virtual memory manager interface has been split into
+      its own class</LI>
+      
+      <LI>queues can have multiple channels</LI>
+      
+      <LI>queues know how to grow (but not when)</LI>
+      
+      <LI>a few performace tweaks in the queues</LI>
+      
+      <LI>some depricated APIs in the queues &#91;
+      EnqueueThreshold(), DequeueThreshold() &#93;</LI>
+      
+      <LI>the move to the name "Computational Process Networks"</LI>
+   </UL>
+</BLOCKQUOTE>
+
+<CENTER>
+
+<HR>
+
+<P>For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
+Allen</A> <A HREF="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</A></P>
+
+<P><A HREF="../AccessStatistics.html"><IMG SRC="http://nub.arlut.utexas.edu/cgi-bin/VersaCounter/vcounter?page=PNSourceCode&amp;block=0" WIDTH=75 HEIGHT=20 BORDER=0 ALIGN=bottom></A></P>
+
+<P>&nbsp;$Id: index.html,v 1.1 2000/03/22 16:21:09 gallen Exp $</P></CENTER>
+</BODY>
+</HTML>
