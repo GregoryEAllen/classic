@@ -1,0 +1,118 @@
+<HTML>
+<!--This file created 10/21/98 11:13 AM by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>EE381K Guest Lecture</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+   <X-CLARIS-WINDOW TOP=66 BOTTOM=1011 LEFT=8 RIGHT=567>
+   <X-CLARIS-TAGVIEW MODE=minimal>
+</HEAD>
+<BODY>
+<H1><CENTER>Beamforming Implementations</CENTER></H1>
+
+<BLOCKQUOTE>Beamforming is generally the most computationally
+   intensive operation in a sonar system. All of the equations
+   presented so far have been to implement a single beam output.
+   However we wish to form many beams, each pointing in a different
+   direction.
+   
+   <CENTER><IMG SRC="Graphics/horizontal.gif" WIDTH=283 HEIGHT=170 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>To form a single beam with data sampled at 100 KHz from an
+   array of 100 elements, 10 million multiply-accumulates (MACs) are
+   required per second. To form 50 beams, 500 million MACs per second
+   are required, which is 1000 MFLOPS. These numbers are for digital
+   beamforming <I>without</I> interpolation.</P>
+   
+   <P>Fortunately, the beamforming algorithm is extremely
+   parallelizable.</P>
+   
+   <P>Traditionally, expensive custom hardware has been required to
+   implement these algorithms in real time. Hardware commonly
+   consists of hardware state machines with multiply-accumulate
+   circuits (MACS). With the push towards COTS (commercial
+   off-the-shelf) technologies, implementations with many DSP boards
+   in a VME chassis are becoming more common. These implementations
+   are still expensive.</P>
+   
+   <H1><CENTER>Vertical Beamforming</CENTER></H1>
+   
+   <P>The above discussion has applied only to 2-D (horizontal)
+   beamforming...</P>
+   
+   <P>In order to image environments in three dimensions, sonar
+   arrays have multiple vertical elements per horizontal location.
+   These elements are vertically beamformed into logical horizontal
+   elements (or staves) before horizontal beamforming. Vertical
+   beamforming has been performed by:</P>
+   
+   <UL>
+      <LI>tying vertical elements together</LI>
+      
+      <LI>analog weighting and summing</LI>
+      
+      <LI>analog weighting, delaying, and summing</LI>
+      
+      <LI>digital weighting, delaying, and summing</LI>
+   </UL>
+   
+   <H1><CENTER>Digital Interpolation Beamforming as a Sparse FIR
+   Filter</CENTER></H1>
+   
+   <P>Modeling the beamformer as a FIR filter allows for a simple,
+   concise organization of the algorithm. For our model we use the
+   following parameters, with values from the example in
+   parentheses:</P>
+   
+   <UL>
+      <LI>T - the total number of elements in the array (80)</LI>
+      
+      <LI>D - the maximum sample delay due to array geometry
+      (31)</LI>
+      
+      <LI>L - the length of the interpolation filter (2)</LI>
+      
+      <LI>B - the number of beams calculated (61)</LI>
+      
+      <LI>S - the number of staves (elements) used to calculate a
+      beam (50)</LI>
+   </UL>
+   
+   <P>In this example we use unity shading, and simply interpolate
+   across two samples. As a result, all coefficient values are
+   between zero and one. The figure below plots these values, where
+   white is one and black is zero. Non-zero coefficients are
+   extremely sparse, allowing efficient implementation. Note that
+   each "picture" contains the values required to calculate one
+   sample of one beam output.</P>
+   
+   <CENTER><IMG SRC="../Beamforming/Graphics/BeamCoeffs.GIF" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
+   
+   <P>If multiple samples of the entire sensor array are stored
+   contiguously in memory, then each beam's coefficients can be
+   represented by a FIR filter of length N = (D+L-1)T. Now the entire
+   beamforming operation (for one sample of B beams) can be
+   represented by a single operation:</P>
+   
+   <CENTER><IMG SRC="../Beamforming/Graphics/operation.gif" WIDTH=427 HEIGHT=102 ALIGN=bottom></CENTER>
+   
+   <P>The FIR filter length, N, can be extremely long -- in our
+   example it is 2560. However, the number of non-zero coefficients
+   is only 100, for a sparsity of 96%. As a result, 6100
+   multiply-accumulates (MACs) are required per sample. At
+   high-frequency sonar sample rates, we are approaching one billion
+   MACs per second.</P></BLOCKQUOTE>
+
+<CENTER><IMG SRC="../Beamforming/Graphics/formulas.gif" WIDTH=359 HEIGHT=113 ALIGN=bottom></CENTER>
+
+<P>
+
+<HR>
+
+</P>
+
+<CENTER>For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
+Allen</A> &lt;<A HREF="mailto:gallen@arlut.utexas.edu">gallen@arlut.utexas.edu</A>&gt;
+
+<P>&nbsp;</P></CENTER>
+</BODY>
+</HTML>

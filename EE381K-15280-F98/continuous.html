@@ -1,0 +1,232 @@
+<HTML>
+<!--This file created 10/21/98 11:13 AM by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>EE381K Guest Lecture</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+   <X-CLARIS-WINDOW TOP=90 BOTTOM=1024 LEFT=11 RIGHT=570>
+   <X-CLARIS-TAGVIEW MODE=minimal>
+</HEAD>
+<BODY>
+<H1><CENTER>Analysis of Space-Time Signals</CENTER></H1>
+
+<BLOCKQUOTE>Propagating waves and the signals they carry can be
+   modeled as functions of space and time, and can be analyzed by
+   using multidimensional Fourier methods.
+   
+   <P>Recall for propagating waves:</P>
+   
+   <UL>
+      <LI>wavelength <FONT FACE="Symbol">l</FONT> = c / f, where c is
+      the speed of propagation and f is the frequency</LI>
+      
+      <LI>wavenumber (spatial frequency) k = 2 <FONT FACE="Symbol">p</FONT>
+      / <FONT FACE="Symbol">l</FONT></LI>
+   </UL>
+   
+   <P>If s(<B>x</B>,t) represents a signal that is a function of
+   spatial position <B>x</B> and time t, taking the continuous 4-D
+   Fourier transform gives the wavenumber-frequency spectrum
+   S(<B>k</B>,<FONT FACE="Symbol">w</FONT>). The variable
+   <FONT FACE="Symbol">w</FONT> represents temporal frequency, and
+   the wavenumber vector <B>k</B> represents the spatial
+   frequency.</P>
+   
+   <P>We observe that any signal can be decomposed into a
+   superposition of propagating plane waves, where elemental signals
+   can be represented as:</P>
+   
+   <BLOCKQUOTE>e(<B>x</B>,t) = exp&#91; j (<FONT FACE="Symbol">w</FONT><SUB>o</SUB>t
+      - <B>k</B><SUB>o</SUB>'<B>x</B>) &#93;</BLOCKQUOTE>
+   
+   <P>If we define the vector <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>
+   = <B>k</B><SUB>o</SUB> / <FONT FACE="Symbol">w</FONT><SUB>o</SUB>,
+   we can rewrite the elemental signal equation as:</P>
+   
+   <BLOCKQUOTE>e(<B>x</B>,t) = exp&#91; j <FONT FACE="Symbol">w</FONT><SUB>o</SUB>(t
+      - <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>'<B>x</B>)
+      &#93;</BLOCKQUOTE>
+   
+   <P>Now e(<B>x</B>,t) can be interpreted as a plane wave
+   propagating in the <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>
+   direction with a speed equal to 1 / | <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>
+   |.</P>
+   
+   <P>Time- and frequency-domain filters can be designed using this
+   approach, the signal s(<B>x</B>,t) is not known for all
+   positions.</P></BLOCKQUOTE>
+
+<H1><CENTER>Continuous-time beamforming</CENTER></H1>
+
+<BLOCKQUOTE>Beamforming can be accomplished by applying signal
+   processing operations to the signals received by an array of
+   sensors. Assume that we have N sensors distributed in space, such
+   that the i<SUP>th</SUP> sensor is located at the position
+   x<SUB>i</SUB> (i=0..N-1) and the signal received by it is
+   r<SUB>i</SUB>(t). These sensors sample s(<B>x</B>,t) spatially --
+   for ideal sampling, r<SUB>i</SUB>(t) = s(<B>x</B><SUB>i</SUB>,t).
+   
+   <P>One of the simplest beamforming systems is called the
+   <FONT COLOR="#660000">weighted delay-and-sum
+   beamformer</FONT>.</P>
+   
+   <H2><CENTER>Weighted Delay-and-Sum Beamformer</CENTER></H2>
+   
+   <P>In this method, the beamformer output b(t) is formed by summing
+   weighted and delayed versions of the receiver signals. The weight
+   is given by w<SUB>i</SUB>, and the delay is <FONT FACE="Symbol">t</FONT><SUB>i</SUB>.</P>
+   
+   <CENTER><IMG SRC="Graphics/delayAndSum.gif" WIDTH=228 HEIGHT=58 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>The delay used for each sensor element is determined by array
+   geometry and the desired pointing direction. To steer the beam in
+   the direction <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>, the
+   delays should be set to <FONT FACE="Symbol">t</FONT><SUB>i</SUB> =
+   -<FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>'<B>x</B><SUB>i</SUB>.
+   In two dimensions, we project the elements onto a line which is
+   perpendicular to the beam's desired pointing direction, which
+   gives a distance for each element. This distance (divided by the
+   speed of sound) gives the delay required to steer the beam in the
+   desired direction.</P>
+   
+   <CENTER><IMG SRC="../Beamforming/Graphics/BeamProjections.GIF" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
+   
+   <H2><CENTER>Array Pattern</CENTER></H2>
+   
+   <P>Like any filter, a beamformer is not ideal -- the
+   <FONT COLOR="#660000">array pattern</FONT> indicates the response
+   of the array. It is given by the following equation:</P>
+   
+   <CENTER><IMG SRC="Graphics/arrayPatternEqn.gif" WIDTH=304 HEIGHT=58 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>The array pattern is essentially the Fourier transform of the
+   receiver weighting function w<SUB>i</SUB>, taking into account the
+   positions <B>x</B><SUB>i</SUB> of the receivers. The function
+   W(<B>k</B>-<B>k</B><SUB>o</SUB>) indicates the attenuation of a
+   plane wave propagating in the direction <FONT FACE="Symbol"><B>a</B></FONT>
+   when the beamformer is steered in the direction <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>.</P>
+   
+   <P>For the special case where all the components of a wideband
+   signal are propagating in the same direction, and the signal
+   crosses the array in the beamformer's steering direction, the
+   beamformer does not distort the waveform. Signals which are not
+   aligned suffer a distortion similar to lowpass filtering.</P>
+   
+   <P>The classic simple example is that of a linear array of N
+   elements, uniformly spaced D units apart (placing the array on the
+   x-axis). For omnidirectional elements, and all elements weighted
+   1/N, the response is (D=1, N=15):</P>
+   
+   <CENTER><IMG SRC="Graphics/arrayPattern.gif" WIDTH=400 HEIGHT=300 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>The beamwidth, which is the width of the main lobe, is
+   inversely proportional to the product ND. This product can be
+   thought of as the length of the array
+   <FONT COLOR="#660000">aperture</FONT>.</P>
+   
+   <P>Notice that the array pattern is periodic in k<SUB>x</SUB>,
+   with a period of 2<FONT FACE="Symbol">p</FONT> / D. These repeated
+   mainlobes are called <FONT COLOR="#660000">grating lobes</FONT>,
+   analogous to the higher diffraction orders caused by an optical
+   diffraction grating. These can be interpreted as spatial frequency
+   aliasing from a spatial sampling interval D which is too large.
+   This aliasing can occur unless D &lt;= <FONT FACE="Symbol">l</FONT>
+   / 2. To prevent this from happening, the receiver signals may be
+   lowpass filtered to eliminate the high-frequency signal components
+   that may be passed by grating lobes.</P>
+   
+   <H2><CENTER>The Receiver Weighting Function</CENTER></H2>
+   
+   <P>Also notice that the response is very close to sinc(
+   NDk<SUB>x</SUB>/ 2<FONT FACE="Symbol">p</FONT>). It is in fact,
+   the frequency response of a 1-D comb filter of length N. This
+   demonstrates the effect of the receiver weighting (also called
+   shading) on the shape of the array pattern -- it is equivalent to
+   window functions in DSP. In selection of the weights, the usual
+   tradeoffs are made between the width of the main lobe and the
+   height of the side lobes.</P>
+   
+   <P>The problem of designing the weights for an arbitrary array
+   geometry is analogous to that of designing a multidimensional FIR
+   filter whose impulse response consists of unequally spaced nonzero
+   samples.</P>
+   
+   <H2><CENTER>Sensor Element Responses</CENTER></H2>
+   
+   <P>The above discussion is only for sensor elements which are
+   omnidirectional. In general, this is not the case. Note that in
+   the above projection with the curved array, we did not use every
+   sensor to calculate every beam. Since our array is curved, each
+   sensor contributes to each beam differently. In the following
+   plot, high responses are white and low responses are black. If the
+   element and the beam point in the same direction, the response is
+   high.</P>
+   
+   <CENTER><IMG SRC="../Beamforming/Graphics/ElemResponse.GIF" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
+   
+   <P>It doesn't make sense to use elements which point in the wrong
+   direction. In the following plot, any element which is some fixed
+   threshold below its maximum is zeroed out. Now we're only using
+   the nonzero elements to form each beam. Although the remaining
+   elements could be used in the calculation, their response in the
+   direction of interest is relatively small for this geometry, and
+   they would merely add noise. Leaving these elements out would also
+   substantially reduce computation.</P>
+   
+   <CENTER><IMG SRC="../Beamforming/Graphics/ElemThreshResponse.GIF" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
+   
+   <H2><CENTER>Filter-and-Sum Beamforming</CENTER></H2>
+   
+   <P>Filter-and-sum beamforming is simply more generalized, where
+   the receiver weighting function depends on frequency. For each
+   sensor in the array, we filter the output r<SUB>i</SUB>(t) with a
+   weighting function w<SUB>i</SUB>(t) to yield a filtered signal
+   q<SUB>i</SUB>(t).</P>
+   
+   <CENTER><IMG SRC="Graphics/filter.gif" WIDTH=205 HEIGHT=30 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>Then we perform our same delay-and-sum operation on the
+   filtered signal. (The weights are already included in the
+   signal).</P>
+   
+   <CENTER><IMG SRC="Graphics/filterAndSum.gif" WIDTH=201 HEIGHT=58 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>Again, the delays should be set to <FONT FACE="Symbol">t</FONT><SUB>i</SUB>
+   = -<FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>'<B>x</B><SUB>i</SUB>
+   to steer the beam in the direction <FONT FACE="Symbol"><B>a</B></FONT><SUB>o</SUB>.</P>
+   
+   <H2><CENTER>Frequency-Domain Beamforming</CENTER></H2>
+   
+   <P>Beamforming can also be performed in the frequency domain,
+   where delaying the signal r<SUB>i</SUB>(t) by <FONT FACE="Symbol">t</FONT><SUB>i</SUB>
+   is implemented by multiplying R<SUB>i</SUB>(<FONT FACE="Symbol">w</FONT>)
+   by the phasor exp(-j<FONT FACE="Symbol">wt</FONT><SUB>i</SUB>).
+   However, we do not have access to the entire spectrum
+   R<SUB>i</SUB>(<FONT FACE="Symbol">w</FONT>). Instead, we transform
+   a segment of r<SUB>i</SUB>(t) by applying a finite extent window
+   and computing the short-time Fourier transform
+   R<SUB>i</SUB>(t,<FONT FACE="Symbol">w</FONT>), an approximation to
+   R<SUB>i</SUB>(<FONT FACE="Symbol">w</FONT>). Now the
+   frequency-domain beamformer output is:</P>
+   
+   <CENTER><IMG SRC="Graphics/freqDomain.gif" WIDTH=413 HEIGHT=58 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>Note that the frequency-domain beamformer is inherently
+   narrowband. The exp(-j<FONT FACE="Symbol">wt</FONT><SUB>i</SUB>)
+   term performs the time delay, and the exp(j<FONT FACE="Symbol">w</FONT>t)
+   term extracts the component of the beamformer output b(t) at the
+   frequency <FONT FACE="Symbol">w</FONT>. An approximation to b(t)
+   could be formed by integrating fd(t,<FONT FACE="Symbol">w</FONT>)
+   over frequency.</P></BLOCKQUOTE>
+
+<P>
+
+<HR>
+
+</P>
+
+<CENTER>For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
+Allen</A> &lt;<A HREF="mailto:gallen@arlut.utexas.edu">gallen@arlut.utexas.edu</A>&gt;
+
+<P>&nbsp;</P></CENTER>
+</BODY>
+</HTML>
