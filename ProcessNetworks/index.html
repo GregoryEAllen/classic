@@ -1,0 +1,173 @@
+<!--This file created 2/24/98 10:32 AM by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Process Networks</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+   <X-SAS-WINDOW TOP=47 BOTTOM=762 LEFT=14 RIGHT=544>
+</HEAD>
+<BODY>
+
+<H1><CENTER>Kahn Process Networks</CENTER></H1>
+
+<BLOCKQUOTE><P>Process networks is a model of computation in which
+multiple parallel processes can execute simultaneously. The model
+uses a directed graph notation, where each node represents a process
+and each edge represents a one-way FIFO queue of data words. A
+producer node inserts data into the queue, while a consumer node
+removes them. This model is natural for describing the streams of
+data samples in a signal processing system.</P>
+
+<P><CENTER><IMG SRC="Graphics/ProcessNetwork.gif" WIDTH=211 HEIGHT=49
+X-SAS-UseImageWidth X-SAS-UseImageHeight ALIGN=bottom></CENTER></P>
+
+<P>Consumers are blocked when they attempt to get data from an empty
+input channel. However, queues are of infinite length, so producers
+are not blocked. This can cause unbounded accumulation of data on a
+given queue.</P>
+
+<P>This model is determinate: the results of the computation (the
+data produced on the queues) does not depend on the firing order of
+the processes.</P>
+
+<P>The problems of determining whether a Kahn process network will
+terminate, or can be scheduled with bounded memory are undecidable.
+</P>
+
+<P>&nbsp;</P></BLOCKQUOTE>
+
+<H1><CENTER>Parks' Rules for Bounded Execution</CENTER></H1>
+
+<BLOCKQUOTE><P>Infinitely large queues cause obvious implementation
+problems, so Parks developed rules for dynamic scheduling in bounded
+memory. Parks lists 2 requirements for the scheduler:</P>
+
+<OL>
+   <LI><B>Complete Execution</B> - The scheduler should implement a
+   complete execution of the process network program. If the program
+   is non-terminating, then it should be executed forever without
+   terminating.
+   
+   <LI><B>Bounded Execution</B> - The scheduler should (if possible)
+   execute the process network program so that only a bounded number
+   of tokens ever accumulate on any of the communication channels.
+</OL>
+
+<P>When these requirements conflict (such as for unbounded programs),
+then requirement 1 takes precedence over requirement 2. We prefer a
+complete, unbounded execution to a partial, bounded one.</P>
+
+<P>Parks goes on to show that the following rules will yield a
+bounded schedule, if one exists:</P>
+
+<OL>
+   <LI>Block when attempting to read an empty queue.
+   
+   <LI>Block when attempting to write to a full queue.
+   
+   <LI>If we reach <I>artificial deadlock</I>, where execution has
+   stopped because processes are blocked writing to full channels,
+   increase the capacity of the smallest full queue until the
+   producer associated with it can fire.
+</OL>
+
+<P>This bounded scheduling process has the desired behavior for all
+types of programs -- terminating or non-terminating, strictly
+bounded, bounded, or unbounded. Now any scheduler will work, because
+any execution leads to bounded buffering on the queues. This model is
+well-suited for implementation using the thread model of concurrent
+programming.</P>
+
+<P>&nbsp;</P></BLOCKQUOTE>
+
+<H1><CENTER>Karp and Miller Computation Graphs</CENTER></H1>
+
+<BLOCKQUOTE><P>Karp and Miller developed a restricted model similar
+to process networks, called "computation graphs", which are also
+determinate. The computation is represented by a finite graph
+containing nodes n<SUB>1</SUB>,...,n<SUB>k</SUB>, each associated
+with a function O<SUB>1</SUB>,...,O<SUB>k</SUB>, connected by a set
+of arcs d<SUB>1</SUB>,...,d<SUB>t</SUB>.</P>
+
+<P><CENTER><IMG SRC="Graphics/ComputationGraph.gif" WIDTH=211
+HEIGHT=49 X-SAS-UseImageWidth X-SAS-UseImageHeight ALIGN=bottom>
+</CENTER></P>
+
+<P>Each arc d<SUB>p</SUB> has four non-negative integer constants
+associated with it:</P>
+
+<UL>
+   <LI>A<SUB>p</SUB> - The number of data words initially present.
+   
+   <LI>U<SUB>p</SUB> - The number of data words inserted each time
+   the producer node fires.
+   
+   <LI>W<SUB>p</SUB> - The number of data words removed each time the
+   consumer node fires.
+   
+   <LI>T<SUB>p</SUB> - The number of data words required to be on the
+   arc before the consumer can fire.
+</UL>
+
+<P>Clearly T<SUB>p</SUB> must be greater than or equal to
+W<SUB>p</SUB>. Three basic rules apply to the execution of a
+computation graph:</P>
+
+<OL>
+   <LI>No node will fire unless each input edge d<SUB>p</SUB> has at
+   least T<SUB>p</SUB> data words.
+   
+   <LI>The execution will continue until every node has at least one
+   input edge with less than T<SUB>p</SUB> data words.
+   
+   <LI>In a "proper execution," every node that has at least
+   T<SUB>p</SUB> data words on each input edge will eventually fire.
+</OL>
+
+<P>For this restricted model, the questions of termination and
+boundedness are decidable. Karp and Miller provide iterative
+algorithms to determine these properties. Computation graphs can be
+statically scheduled. In fact, synchronous data flow (SDF) is a
+special case where T<SUB>p</SUB> = W<SUB>p</SUB> for every arc.</P>
+</BLOCKQUOTE>
+
+<P><CENTER>
+<HR>
+</CENTER></P>
+
+<BLOCKQUOTE><BLOCKQUOTE><P><FONT SIZE="+1">For additional
+information</FONT>:</P></BLOCKQUOTE>
+
+<UL>
+   <LI>G. Kahn, "The semantics of a simple language for parallel
+   programming." In <I>Info. Proc.</I>, pages 471-475, Stockholm,
+   Aug. 1974.
+   
+   <LI>G. Kahn and D. B. MacQueen, "Coroutines and networks of
+   parallel processes." In <I>Info. Proc.</I>, pages 993-998,
+   Toronto, Aug. 1977.
+   
+   <LI>T. M. Parks.
+   "<A HREF="http://ptolemy.eecs.berkeley.edu/papers/parksThesis/">Bounded
+   Scheduling of Process Networks.</A>" <I>Technical Report
+   UCB/ERL-95-105</I>, PhD Dissertation, EECS Department, University
+   of California. Berkeley, CA 94720, December 1995.
+   
+   <LI>R. M. Karp and R. E. Miller, "Properties of a Model for
+   Parallel Computations: Determinacy, Termination, Queueing."
+   <I>SIAM Journal</I>, vol. 14, pp. 1390-1411, Nov. 1966.
+   
+   <LI>Guy Maor's
+   <A HREF="http://www.ece.utexas.edu/~maor/kmjava/">Karp and Miller
+   processes in Java webpage</A>.
+</UL></BLOCKQUOTE>
+
+<P><CENTER>&nbsp;
+<HR>
+</CENTER></P>
+
+<P><CENTER>Page by <A HREF="mailto:gallen@arlut.utexas.edu">Greg
+Allen &lt;gallen@arlut.utexas.edu&gt;</A></CENTER></P>
+
+<P><CENTER>&nbsp;</CENTER></P>
+</BODY>
+</HTML>
