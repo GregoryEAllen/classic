@@ -1,187 +1,171 @@
-<HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <!--This file created by Claris Home Page version 3.0-->
-<HEAD>
-   <TITLE>Beamforming</TITLE>
-   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
-   <X-CLARIS-WINDOW TOP=256 BOTTOM=937 LEFT=644 RIGHT=1173>
-   <X-CLARIS-TAGVIEW MODE=minimal>
-</HEAD>
-<BODY>
-<H1><CENTER><FONT SIZE="+2"><B>What Is
-Beamforming?</B></FONT></CENTER></H1>
-
-<BLOCKQUOTE>A beamformer is a spatial filter that operates on the
-   output of an array of sensors in order to enhance the amplitude of
-   a coherent wavefront relative to background noise and directional
-   interference. The figure below shows a curved array of hydrophone
-   sensors, or staves. Each sensor (red circle) is located at an
-   (x,y) coordinate as shown. These sensors are pointed in known
-   directions (blue arrows), and we wish to form beams which point in
-   chosen directions (green arrows). The "pointing direction" is
-   called the Maximum Response Angle (MRA), and can be arbitrarily
-   chosen for the beams.</BLOCKQUOTE>
-
-<CENTER><IMG SRC="Graphics/Geometry.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
-
-<BLOCKQUOTE>The response of a given element is plotted on a polar
-   graph, where the angle is the offset from the MRA, and the radius
-   is the magnitude response (dB) in that direction. Element
-   responses (determined by the 3dB down point) are very wide -- in
-   this example the width is about 90 degrees.
-   
-   <CENTER><IMG SRC="Graphics/ElemPolarResp.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
-   
-   <P>The goal of beamforming is to sum multiple elements to achieve
-   a narrower response in a desired direction (the MRA). That way
-   when we hear a sound in a given beam, we know which direction it
-   came from. Real implementations introduce things such as nulls and
-   sidelobes, which we won't discuss here.</P>
-   
-   <CENTER><IMG SRC="Graphics/BeamPolarResp.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom>
-   
-   <P><FONT SIZE="+2"><B>&nbsp;</B></FONT></P></CENTER></BLOCKQUOTE>
-
-<H1><CENTER><FONT SIZE="+2"><B>Implementing a
-Beamformer</B></FONT></CENTER></H1>
-
-<BLOCKQUOTE>Time-domain beamforming is done by delaying and adding
-   shaded outputs from an array of transducers. The (optional)
-   shading of the sensor outputs is done to improve the spatial
-   response characteristics of the beam, and is roughly equivalent to
-   "windowing" in DSP theory. Each beam is formed by delaying and
-   summing sensor elements. The following block diagram shows how a
-   single beam is formed from N transducers, in an analog beamformer.
-   
-   <CENTER><IMG SRC="Graphics/AnalogBeamformer.gif" WIDTH=269 HEIGHT=164 ALIGN=bottom></CENTER>
-   
-   <P>The delay used for each sensor element is determined by array
-   geometry and the desired MRA. Projecting the elements onto a line
-   which is perpendicular to the beam's MRA gives a distance for each
-   element. This distance (divided by the speed of sound) gives the
-   delay required to form the beam at the desired MRA.</P>
-   
-   <CENTER><IMG SRC="Graphics/BeamProjections.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
-   
-   <P>Note that we did not use every sensor to calculate every beam.
-   Since our array is curved, each sensor contributes to each beam
-   differently. In the following plot, high responses are white and
-   low responses are black. If the element and the beam point in the
-   same direction, the response is high.</P>
-   
-   <CENTER><IMG SRC="Graphics/ElemResponse.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom></CENTER>
-   
-   <P>It doesn't make sense to use elements which point in the wrong
-   direction. In the following plot, any element which is some fixed
-   threshold below its maximum is zeroed out. Now we're only using
-   the non-zero elements to form each beam. This step saves on
-   processing, with minimal beam degradation.</P>
-   
-   <CENTER><IMG SRC="Graphics/ElemThreshResponse.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom>
-   
-   <P><FONT SIZE="+2"><B>&nbsp;</B></FONT></P></CENTER></BLOCKQUOTE>
-
-<H1><CENTER><FONT SIZE="+2"><B>Digital Interpolation
-Beamforming</B></FONT></CENTER></H1>
-
-<BLOCKQUOTE>In a digital implementation, we sample these elements at
-   a rate just above the Nyquist criterion. Although this preserves
-   the frequency content of the signal, this does not give enough
-   steering delay resolution. Digital interpolation is performed,
-   increasing the steering-delay resolution by a factor of L. Now
-   time delays are quantized to integer sample delays.
-   
-   <CENTER><IMG SRC="Graphics/DigitalBeamformer.gif" WIDTH=398 HEIGHT=165 ALIGN=bottom></CENTER>
-   
-   <P>In this example we use unity shading, and simply interpolate
-   across two samples. As a result, all coefficient values are
-   between zero and one. The figure below plots these values, where
-   white is one and black is zero. Non-zero coefficients are
-   extremely sparse, allowing efficient implementation. Note that
-   each "picture" contains the values required to calculate one
-   sample of one beam output.</P>
-   
-   <CENTER><IMG SRC="Graphics/BeamCoeffs.gif" WIDTH=400 HEIGHT=300 ALIGN=bottom>
-   
-   <P><FONT SIZE="+2"><B>&nbsp;</B></FONT></P></CENTER></BLOCKQUOTE>
-
-<H1><CENTER><FONT SIZE="+2"><B>Beamforming as a Sparse FIR
-Filter</B></FONT></CENTER></H1>
-
-<BLOCKQUOTE>Modeling the beamformer as a FIR filter allows for a
-   simple, concise organization of the algorithm. For our model we
-   use the following parameters, with values from the example in
-   parentheses:
-   
-   <UL>
-      <LI>T - the total number of elements in the array (80)</LI>
-      
-      <LI>D - the maximum sample delay due to array geometry
-      (31)</LI>
-      
-      <LI>L - the length of the interpolation filter (2)</LI>
-      
-      <LI>B - the number of beams calculated (61)</LI>
-      
-      <LI>S - the number of staves (elements) used to calculate a
-      beam (50)</LI>
-   </UL>
-   
-   <P>If multiple samples of the entire sensor array are stored
-   contiguously in memory, then each beam's coefficients can be
-   represented by a FIR filter of length N = (D+L-1)T. Now the entire
-   beamforming operation (for one sample of B beams) can be
-   represented by a single operation:</P>
-   
-   <CENTER><IMG SRC="Graphics/operation.gif" WIDTH=427 HEIGHT=102 ALIGN=bottom></CENTER>
-   
-   <P>The FIR filter length, N, can be extremely long -- in our
-   example it is 2560. However, the number of non-zero coefficients
-   is only 100, for a sparsity of 96%. As a result, 6100
-   multiply-accumulates (MACs) are required per sample. At
-   high-frequency sonar sample rates, we are approaching one billion
-   MACs per second.</P></BLOCKQUOTE>
-
-<CENTER><IMG SRC="Graphics/formulas.gif" WIDTH=359 HEIGHT=113 ALIGN=bottom>
-
-<P>
-
-<HR>
-
-</P></CENTER>
-
-<BLOCKQUOTE><BLOCKQUOTE><FONT SIZE="+1">For additional
-      information</FONT>:</BLOCKQUOTE>
-   
-   <UL>
-      <LI>R. G. Pridham and R. A. Mucci, "A Novel Approach to Digital
-      Beamforming." <I>Journal of the Acoustical Society of
-      America</I>, vol. 63, no. 2, pp. 425-434, Feb. 1978.</LI>
-      
-      <LI>R. G. Pridham and R. A. Mucci, "Digital Interpolation
-      Beamforming for Low-Pass and Bandpass Signals." <I>Proceedings
-      of the IEEE</I>, vol. 67, no. 6, pp. 904-919, June 1979.</LI>
-      
-      <LI>R. A. Mucci, "A Comparison of Efficient Beamforming
-      Algorithms." <I>IEEE Transactions on Acoustics, Speech, and
-      Signal Processing</I>, vol. ASSP-32, no. 3, 548-558, June
-      1984.</LI>
-      
-      <LI>J. Stine, "Beamforming Illustrations" <A HREF="http://www.ece.utexas.edu/projects/ee381k-9/lectures/14_Array_SigProc/lecture14/john_stine.pdf">report</A>
-      and <A HREF="http://www.ece.utexas.edu/projects/ee381k-9/lectures/14_Array_SigProc/lecture14/demonstration.pdf">slides</A>,
-      for EE381K Advanced Digital Signal Processing, July 1997.</LI>
-      
-      <LI>Brian Evans' <A HREF="http://www.ece.utexas.edu/~bevans/courses/realtime/lectures/08_Digital_Filters/">digital
-      filtering web page</A>.</LI>
-   </UL>
-</BLOCKQUOTE>
-
-<CENTER>
-
-<HR>
-
-<P>Page by <A HREF="mailto:gallen@arlut.utexas.edu">Greg Allen
-&lt;gallen@arlut.utexas.edu&gt;</A></P>
-
-<P>&nbsp;</P></CENTER>
-</BODY>
-</HTML>
+  <title>Beamforming</title>
+  <meta name="GENERATOR" content="Claris Home Page 3.0">
+  <x-claris-window top="256" bottom="937" left="644" right="1173"></x-claris-window>
+  <x-claris-tagview mode="minimal"></x-claris-tagview>
+</head>
+<body>
+<div style="text-align: center;"><a href="http://FindSabrina.org/"><img
+ style="border: 0px solid ; width: 728px; height: 90px;"
+ alt="FindSabrina.org"
+ src="http://findsabrina.org/posters/BannerBig.gif"></a><br>
+<br>
+<span style="font-weight: bold;">My daughter, Sabrina, has been
+abducted. Please help me to find her by visiting </span><a
+ style="font-weight: bold;" href="http://FindSabrina.org/">FindSabrina.org</a><span
+ style="font-weight: bold;">.</span><br>
+</div>
+<h1>
+<center>
+<hr style="width: 100%; height: 2px;"><font size="+2"><b>What Is
+Beamforming?</b></font></center>
+</h1>
+<blockquote>A beamformer is a spatial filter that operates on the
+output of an array of sensors in order to enhance the amplitude of a
+coherent wavefront relative to background noise and directional
+interference. The figure below shows a curved array of hydrophone
+sensors, or staves. Each sensor (red circle) is located at an (x,y)
+coordinate as shown. These sensors are pointed in known directions
+(blue arrows), and we wish to form beams which point in chosen
+directions (green arrows). The "pointing direction" is called the
+Maximum Response Angle (MRA), and can be arbitrarily chosen for the
+beams.</blockquote>
+<center><img src="Graphics/Geometry.gif" width="400" height="300"
+ align="bottom"></center>
+<blockquote>The response of a given element is plotted on a polar
+graph, where the angle is the offset from the MRA, and the radius is
+the magnitude response (dB) in that direction. Element responses
+(determined by the 3dB down point) are very wide -- in this example the
+width is about 90 degrees.
+  <center><img src="Graphics/ElemPolarResp.gif" width="400" height="300"
+ align="bottom"></center>
+  <p>The goal of beamforming is to sum multiple elements to achieve a
+narrower response in a desired direction (the MRA). That way when we
+hear a sound in a given beam, we know which direction it came from.
+Real implementations introduce things such as nulls and sidelobes,
+which we won't discuss here.</p>
+  <center><img src="Graphics/BeamPolarResp.gif" width="400" height="300"
+ align="bottom">
+  <p><font size="+2"><b>&nbsp;</b></font></p>
+  </center>
+</blockquote>
+<h1>
+<center><font size="+2"><b>Implementing a
+Beamformer</b></font></center>
+</h1>
+<blockquote>Time-domain beamforming is done by delaying and adding
+shaded outputs from an array of transducers. The (optional) shading of
+the sensor outputs is done to improve the spatial response
+characteristics of the beam, and is roughly equivalent to "windowing"
+in DSP theory. Each beam is formed by delaying and summing sensor
+elements. The following block diagram shows how a single beam is formed
+from N transducers, in an analog beamformer.
+  <center><img src="Graphics/AnalogBeamformer.gif" width="269"
+ height="164" align="bottom"></center>
+  <p>The delay used for each sensor element is determined by array
+geometry and the desired MRA. Projecting the elements onto a line which
+is perpendicular to the beam's MRA gives a distance for each element.
+This distance (divided by the speed of sound) gives the delay required
+to form the beam at the desired MRA.</p>
+  <center><img src="Graphics/BeamProjections.gif" width="400"
+ height="300" align="bottom"></center>
+  <p>Note that we did not use every sensor to calculate every beam.
+Since our array is curved, each sensor contributes to each beam
+differently. In the following plot, high responses are white and low
+responses are black. If the element and the beam point in the same
+direction, the response is high.</p>
+  <center><img src="Graphics/ElemResponse.gif" width="400" height="300"
+ align="bottom"></center>
+  <p>It doesn't make sense to use elements which point in the wrong
+direction. In the following plot, any element which is some fixed
+threshold below its maximum is zeroed out. Now we're only using the
+non-zero elements to form each beam. This step saves on processing,
+with minimal beam degradation.</p>
+  <center><img src="Graphics/ElemThreshResponse.gif" width="400"
+ height="300" align="bottom">
+  <p><font size="+2"><b>&nbsp;</b></font></p>
+  </center>
+</blockquote>
+<h1>
+<center><font size="+2"><b>Digital Interpolation
+Beamforming</b></font></center>
+</h1>
+<blockquote>In a digital implementation, we sample these elements at a
+rate just above the Nyquist criterion. Although this preserves the
+frequency content of the signal, this does not give enough steering
+delay resolution. Digital interpolation is performed, increasing the
+steering-delay resolution by a factor of L. Now time delays are
+quantized to integer sample delays.
+  <center><img src="Graphics/DigitalBeamformer.gif" width="398"
+ height="165" align="bottom"></center>
+  <p>In this example we use unity shading, and simply interpolate
+across two samples. As a result, all coefficient values are between
+zero and one. The figure below plots these values, where white is one
+and black is zero. Non-zero coefficients are extremely sparse, allowing
+efficient implementation. Note that each "picture" contains the values
+required to calculate one sample of one beam output.</p>
+  <center><img src="Graphics/BeamCoeffs.gif" width="400" height="300"
+ align="bottom">
+  <p><font size="+2"><b>&nbsp;</b></font></p>
+  </center>
+</blockquote>
+<h1>
+<center><font size="+2"><b>Beamforming as a Sparse FIR
+Filter</b></font></center>
+</h1>
+<blockquote>Modeling the beamformer as a FIR filter allows for a
+simple, concise organization of the algorithm. For our model we use the
+following parameters, with values from the example in parentheses:
+  <ul>
+    <li>T - the total number of elements in the array (80)</li>
+    <li>D - the maximum sample delay due to array geometry (31)</li>
+    <li>L - the length of the interpolation filter (2)</li>
+    <li>B - the number of beams calculated (61)</li>
+    <li>S - the number of staves (elements) used to calculate a beam
+(50)</li>
+  </ul>
+  <p>If multiple samples of the entire sensor array are stored
+contiguously in memory, then each beam's coefficients can be
+represented by a FIR filter of length N = (D+L-1)T. Now the entire
+beamforming operation (for one sample of B beams) can be represented by
+a single operation:</p>
+  <center><img src="Graphics/operation.gif" width="427" height="102"
+ align="bottom"></center>
+  <p>The FIR filter length, N, can be extremely long -- in our example
+it is 2560. However, the number of non-zero coefficients is only 100,
+for a sparsity of 96%. As a result, 6100 multiply-accumulates (MACs)
+are required per sample. At high-frequency sonar sample rates, we are
+approaching one billion MACs per second.</p>
+</blockquote>
+<center><img src="Graphics/formulas.gif" width="359" height="113"
+ align="bottom">
+<hr></center>
+<blockquote>
+  <blockquote><font size="+1">For additional information</font>:</blockquote>
+  <ul>
+    <li>R. G. Pridham and R. A. Mucci, "A Novel Approach to Digital
+Beamforming." <i>Journal of the Acoustical Society of America</i>,
+vol. 63, no. 2, pp. 425-434, Feb. 1978.</li>
+    <li>R. G. Pridham and R. A. Mucci, "Digital Interpolation
+Beamforming for Low-Pass and Bandpass Signals." <i>Proceedings of the
+IEEE</i>, vol. 67, no. 6, pp. 904-919, June 1979.</li>
+    <li>R. A. Mucci, "A Comparison of Efficient Beamforming
+Algorithms." <i>IEEE Transactions on Acoustics, Speech, and Signal
+Processing</i>, vol. ASSP-32, no. 3, 548-558, June 1984.</li>
+    <li>D. E. Dudgeon and R. M. Mersereau, "<a
+ href="http://www.amazon.com/exec/obidos/tg/detail/-/0136049591/qid=1094058263/sr=8-1/ref=sr_8_xs_ap_i1_xgl14/102-7546612-7799323?v=glance&amp;s=books&amp;n=507846">Multidimensional
+Digital Signal Processing</a>." Prentice Hall, 1983.<br>
+    </li>
+  </ul>
+</blockquote>
+<center>
+<hr>
+<p>Page by <a href="mailto:gallen@arlut.utexas.edu">Greg Allen
+&lt;gallen@arlut.utexas.edu&gt;</a></p>
+<p>&nbsp;</p>
+</center>
+</body>
+</html>
