@@ -1,0 +1,108 @@
+<HTML>
+<!--This file created by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>IEEE Trans on Sig Proc</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+   <X-CLARIS-WINDOW TOP=146 BOTTOM=861 LEFT=522 RIGHT=1052>
+   <X-CLARIS-TAGVIEW MODE=minimal>
+</HEAD>
+<BODY BGCOLOR="#F3F3F3">
+<CENTER>This paper was presented as a portion of a Ph. D. Qualifying
+Exam in August 1999.
+
+<P>
+
+<HR>
+
+<B>&nbsp;</B></P></CENTER>
+
+<BLOCKQUOTE><H2><CENTER>A Framework for Real-Time High-Throughput
+   Signal and Image Processing Systems on Workstations</CENTER></H2>
+   
+   <H3><CENTER>Ph.D. Qualifying Proposal</CENTER></H3>
+   
+   <CENTER>&nbsp;</CENTER>
+   
+   <H4><CENTER>Computer Engineering Area</CENTER></H4>
+   
+   <H4><CENTER>Department of Electrical and Computer
+   Engineering</CENTER></H4>
+   
+   <H4><CENTER>The University of Texas at Austin</CENTER></H4>
+   
+   <CENTER>&nbsp;</CENTER>
+   
+   <H4><CENTER>Submitted by <A HREF="http://www.ece.utexas.edu/~allen/">Gregory
+   E. Allen</A>, B.S.E.E., M.S.E.</CENTER></H4>
+   
+   <CENTER><A HREF="mailto:gallen@arlut.utexas.edu">gallen@arlut.utexas.edu</A>
+   
+   <P><A HREF="http://www.ece.utexas.edu/~allen/">http://www.ece.utexas.edu/~allen/</A></P>
+   
+   <P>&nbsp;</P></CENTER>
+   
+   <H4><CENTER>Committee Members:</CENTER></H4>
+   
+   <CENTER>Prof. James C. Browne (Dept. of CS)
+   
+   <P>Prof. Craig M. Chase (Dept. of ECE), chairman</P>
+   
+   <P>Prof. Brian L. Evans (Dept. of ECE), advisor</P>
+   
+   <P>Prof. Lizy K. John (Dept. of ECE)</P>
+   
+   <P>Dr. Charles M. Loeffler (ARL:UT)</P>
+   
+   <P>&nbsp;</P></CENTER>
+   
+   <H3><CENTER>Abstract</CENTER></H3>
+   
+   <P>Real-time data-intensive systems such as sonar beamformers and
+   synthetic aperture radar processors have traditionally required
+   implementation in expensive custom hardware. Current systems use
+   off-the-shelf programmable processors in customized configurations
+   to reduce development cost. To reduce development cost and time
+   further, we consider the use of workstations as the target
+   architecture and design environment. We present a general approach
+   for realizing real-time data-intensive systems in software on a
+   multiprocessor workstation.</P>
+   
+   <P>First, we present several dataflow models which are commonly
+   used to describe systems of this nature. Second, we present a
+   framework for developing scalable software implementations of
+   signal and image processing systems on workstations. The framework
+   models the concurrency and parallelism in these systems using
+   Process Networks. The Process Network model guarantees determinate
+   execution of concurrent programs regardless of the scheduling
+   algorithm used. We employ a scheduling algorithm that always finds
+   a bounded execution if one exists. Third, we implement the
+   framework in C++ using lightweight real-time POSIX threads.</P>
+   
+   <P>We use two case studies to evaluate the performance of our
+   framework: a high-resolution 3-D sonar beamformer, and a synthetic
+   aperture radar processor. On a Sun Ultra Enterprise workstation,
+   the 4-GFLOP beamformer exhibits near-linear speedup using 1 to 12
+   processors and executes in real-time with 12 336-MHz UltraSPARC-II
+   processors.</P></BLOCKQUOTE>
+
+<CENTER>
+
+<HR>
+
+<P>The <A HREF="QualPaper.pdf">full paper</A> and <A HREF="QualSlides.pdf">slides
+from the presentation</A> in <A HREF="http://www.adobe.com/products/acrobat/readstep.html">PDF</A>.</P>
+
+<P>
+
+<HR>
+
+</P></CENTER>
+
+<BLOCKQUOTE><CENTER>&nbsp;For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
+   Allen</A> <A HREF="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</A>
+   
+   <P>$Id: index.html,v 1.1 2000/03/10 20:45:37 gallen Exp $</P>
+   
+   <P></P></CENTER></BLOCKQUOTE>
+</BODY>
+</HTML>
