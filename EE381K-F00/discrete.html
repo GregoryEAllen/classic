@@ -1,0 +1,115 @@
+<HTML>
+<!--This file created 10/21/98 11:13 AM by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>EE381K Guest Lecture</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+   <X-CLARIS-WINDOW TOP=66 BOTTOM=1011 LEFT=7 RIGHT=566>
+   <X-CLARIS-TAGVIEW MODE=minimal>
+</HEAD>
+<BODY>
+<H1><CENTER>Discrete-time beamforming</CENTER></H1>
+
+<BLOCKQUOTE>In order to implement beamforming in digital systems, we
+   must sample the received signals in time, at t = n<FONT FACE="Symbol">D</FONT>.
+   Now in our digital delay-and-sum, our time delays <FONT FACE="Symbol">t</FONT><SUB>i</SUB>
+   must be quantized to the nearest sample. (Note that in these
+   diagram, alphas are the shading coefficients rather than the
+   slowness vector.)</BLOCKQUOTE>
+
+<CENTER><IMG SRC="Graphics/digitalBeamformer.gif" WIDTH=310 HEIGHT=144 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+
+<BLOCKQUOTE>These quantization errors in the time delay perterb the
+   array pattern. In general, the sensors must be sampled at a rate
+   much greater than the Nyquist rate to approximate the time delays
+   required for beam steering. To handle the high bandwidth and large
+   number of elements needed for high resolution sonar, the necessary
+   sampling rate is quite large. These high sampling rates impose
+   requirements on the A/D converters and on the bandwidth of the
+   cables which connect the A/D converters to the beamformer. Large
+   amounts of memory are also required to handle the long delays
+   associated with large arrays and high sample rates. Because of the
+   high implementation cost, digital interpolation beamformers are
+   generally used instead.
+   
+   <H2><CENTER>Digital Interpolation Beamforming</CENTER></H2>
+   
+   <P>Now we sample at just above the Nyquist rate, and achieve the
+   desired time-delay resolution by digital interpolation of the
+   sampled data.</P>
+   
+   <CENTER><IMG SRC="Graphics/digitalInterpBmfr.gif" WIDTH=382 HEIGHT=144 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>In the above digital system, the sensors are sampled at the
+   interval <FONT FACE="Symbol">D</FONT>, needed to satisfy the
+   Nyquist criterion. In the beamformer, digital interpolation is
+   performed to the interval <FONT FACE="Symbol">d</FONT>, where
+   <FONT FACE="Symbol">D</FONT> = L <FONT FACE="Symbol">d</FONT>, and
+   L is an integer larger than one. Now time delays are quantized to
+   integer multiples of <FONT FACE="Symbol">d</FONT>, i.e.,
+   <FONT FACE="Symbol">t</FONT><SUB>i</SUB> =
+   N<SUB>i</SUB><FONT FACE="Symbol">d</FONT>.</P>
+   
+   <P>In a wideband sonar, the digital interpolation beamformer
+   technique relaxes specifications on the A/D conversion rate and
+   data transmission bandwidth at the expense of additional
+   computation for digital interpolation. Beam degradation introduced
+   by interpolation is controllable and quite small for an
+   interpolation filter of modest design.</P>
+   
+   <H3><CENTER>Digital Interpolation</CENTER></H3>
+   
+   <P>Digital interpolation is a two-step process: zero-insertion and
+   then lowpass filtering. Since the filter and the summation are
+   both linear, the filter can be placed either before or after the
+   beamformer summation.</P>
+   
+   <P>The first step of interpolation, zero-insertion, involves
+   transforming the digital stream x<SUB>m</SUB>(n<FONT FACE="Symbol">D</FONT>)
+   by inserting L-1 zeros after each sample. The resulting stream
+   x<SUB>m</SUB>(n<FONT FACE="Symbol">d</FONT>) has L times more
+   samples, and has had its sampling period reduced by a factor of
+   L.</P>
+   
+   <CENTER><IMG SRC="Graphics/digitalInterpolation.gif" WIDTH=396 HEIGHT=77 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>To complete the interpolation, an ideal digital lowpass filter
+   with a cutoff frequency at <FONT FACE="Symbol">w</FONT> = ¹/L is
+   required. Filtering the stream x<SUB>m</SUB>(n<FONT FACE="Symbol">d</FONT>)
+   yields the interpolated approximation to the input sampled at the
+   interval <FONT FACE="Symbol">d</FONT>. Since FIR filters are not
+   ideal, error is introduced at the beamformer output. Increasing
+   the number of filter coefficients reduces this error, so there is
+   a tradeoff between accuracy and computational complexity.</P>
+   
+   <H2><CENTER>Frequency-Domain Beamforming for Discrete-Time
+   Signals</CENTER></H2>
+   
+   <P>Again, frequency-domain beamforming is inherently narrowband.
+   The discrete-time frequency-domain beamformer output is given
+   by</P>
+   
+   <CENTER><IMG SRC="Graphics/discreteFreqBmfr.gif" WIDTH=482 HEIGHT=58 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+   
+   <P>Note that the factor R<SUB>i</SUB>(n<FONT FACE="Symbol">D</FONT>,<FONT FACE="Symbol">w</FONT>)exp(j<FONT FACE="Symbol">w</FONT>n<FONT FACE="Symbol">D</FONT>)
+   can be efficiently calculated for many values of <FONT FACE="Symbol">w</FONT>
+   with a 1-D FFT.</P>
+   
+   <P>Since the beam has been formed in the frequency domain, the
+   steering delays <FONT FACE="Symbol">t</FONT><SUB>i</SUB> do
+   <I>not</I> have to be quantized.</P>
+   
+   <P>For the special case of equally spaced linear arrays, the
+   discrete frequency-domain beamformer output can be computed by
+   applying a 2-D DFT directly to the receiver signals
+   r<SUB>i</SUB>(n<FONT FACE="Symbol">D</FONT>).</P></BLOCKQUOTE>
+
+<CENTER>
+
+<HR>
+
+<P>For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
+Allen</A> &lt;<A HREF="mailto:gallen@arlut.utexas.edu">gallen@arlut.utexas.edu</A>&gt;</P>
+
+<P>&nbsp;</P></CENTER>
+</BODY>
+</HTML>
