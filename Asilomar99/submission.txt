@@ -28,6 +28,12 @@
     Austin, TX 78712-1084
     bevans@ece.utexas.edu
 
+    Prof. Lizy K. John
+    Dept. of Electrical and Computer Engineering
+    The University of Texas at Austin
+    Austin, TX 78712-1084
+    ljohn@ece.utexas.edu
+
 4,5. Point of contact (POC)
 
     Gregory E. Allen
