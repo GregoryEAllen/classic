@@ -1,0 +1,3778 @@
+%PDF-1.1
+%«Ïè¢
+4 0 obj
+<< /Length 5 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 492 m
+743.25 492 l
+743.25 291 l
+47.75 291 l
+h
+n
+endstream
+endobj
+5 0 obj
+401
+endobj
+6 0 obj
+<< /Type /Font /Name /R6 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+7 0 obj
+<< /Length 8 0 R >>
+stream
+BT
+/R6 48 Tf
+1 0 0 1 73 447 Tm
+(Real-Time Sonar Beamforming) Tj
+1 0 0 1 100.75 399 Tm
+(on a Unix Workstation using) Tj
+1 0 0 1 213.5 351 Tm
+(Process Networks) Tj
+1 0 0 1 179.562 303 Tm
+(and POSIX Pthreads) Tj
+ET
+Q
+q
+W
+47.75 168 m
+743.25 168 l
+743.25 87 l
+47.75 87 l
+h
+n
+BT
+/R6 36 Tf
+1 0 0 1 264 132 Tm
+(Gregory E. Allen) Tj
+1 0 0 1 259.562 96 Tm
+(24 February 1998) Tj
+ET
+Q
+endstream
+endobj
+8 0 obj
+373
+endobj
+3 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R6 6 0 R
+>>
+>>
+/Contents [
+4 0 R
+7 0 R
+]
+>>
+endobj
+10 0 obj
+<< /Length 11 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 528 m
+743.25 528 l
+743.25 483 l
+47.75 483 l
+h
+n
+endstream
+endobj
+11 0 obj
+401
+endobj
+12 0 obj
+<< /Type /Font /Name /R12 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+13 0 obj
+<< /Length 14 0 R >>
+stream
+BT
+/R12 36 Tf
+1 0 0 1 310.562 492 Tm
+(Motivation) Tj
+ET
+Q
+q
+W
+97.25 444.75 m
+734.25 444.75 l
+734.25 123.75 l
+97.25 123.75 l
+h
+n
+endstream
+endobj
+14 0 obj
+128
+endobj
+15 0 obj
+<< /Type /Font /Name /R15 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+16 0 obj
+<< /Length 17 0 R >>
+stream
+BT
+/R15 24 Tf
+1 0 0 1 98.5 417.75 Tm
+(\267 Beamforming is a computationally intense algorithm which has ) Tj
+1 0 0 1 116.5 393.75 Tm
+(traditionally been limited to expensive custom hardware.  ) Tj
+1 0 0 1 116.5 369.75 Tm
+(\(GFLOPS\)) Tj
+1 0 0 1 98.5 321.75 Tm
+(\267 Current multi-processor RISC workstations post benchmarks ) Tj
+1 0 0 1 116.5 297.75 Tm
+(that approach these capabilities at a fraction of the cost.) Tj
+1 0 0 1 98.5 249.75 Tm
+(\267 Real-time performance has traditionally been beyond the ) Tj
+1 0 0 1 116.5 225.75 Tm
+(capabilities of standard Unix.) Tj
+1 0 0 1 98.5 177.75 Tm
+(\267 POSIX Real-time extensions \(including Pthreads\) with ) Tj
+1 0 0 1 116.5 153.75 Tm
+(symmetric multiprocessing could allow a workstation ) Tj
+1 0 0 1 116.562 129.75 Tm
+(implementation.) Tj
+ET
+Q
+endstream
+endobj
+17 0 obj
+791
+endobj
+9 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R15 15 0 R
+/R12 12 0 R
+>>
+>>
+/Contents [
+10 0 R
+13 0 R
+16 0 R
+]
+>>
+endobj
+19 0 obj
+<< /Length 20 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 510 m
+743.25 510 l
+743.25 465 l
+47.75 465 l
+h
+n
+endstream
+endobj
+20 0 obj
+401
+endobj
+21 0 obj
+<< /Type /Font /Name /R21 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+22 0 obj
+<< /Length 23 0 R >>
+stream
+BT
+/R21 36 Tf
+1 0 0 1 314.562 474 Tm
+(Objectives) Tj
+ET
+Q
+q
+W
+97.25 413.25 m
+734.25 413.25 l
+734.25 140.25 l
+97.25 140.25 l
+h
+n
+endstream
+endobj
+23 0 obj
+128
+endobj
+24 0 obj
+<< /Type /Font /Name /R24 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+25 0 obj
+<< /Length 26 0 R >>
+stream
+BT
+/R24 24 Tf
+1 0 0 1 98.5 386.25 Tm
+(\267 Utilize the process networks model, which is a natural way to ) Tj
+1 0 0 1 116.5 362.25 Tm
+(describe signal processing systems.) Tj
+1 0 0 1 98.5 314.25 Tm
+(\267 Implement high-performance, low-overhead process networks ) Tj
+1 0 0 1 116.5 290.25 Tm
+(using lightweight threads.) Tj
+1 0 0 1 98.5 242.25 Tm
+(\267 Implement and benchmark \252digital interpolated beamformer\272 ) Tj
+1 0 0 1 116.5 218.25 Tm
+(algorithms.) Tj
+1 0 0 1 98.5 170.25 Tm
+(\267 Create a real-time beamformer on a workstation that can replace ) Tj
+1 0 0 1 116.562 146.25 Tm
+(custom hardware.) Tj
+ET
+Q
+endstream
+endobj
+26 0 obj
+613
+endobj
+18 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R24 24 0 R
+/R21 21 0 R
+>>
+>>
+/Contents [
+19 0 R
+22 0 R
+25 0 R
+]
+>>
+endobj
+28 0 obj
+<< /Length 29 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 528 m
+743.25 528 l
+743.25 483 l
+47.75 483 l
+h
+n
+endstream
+endobj
+29 0 obj
+401
+endobj
+30 0 obj
+<< /Type /Font /Name /R30 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+31 0 obj
+<< /Length 32 0 R >>
+stream
+BT
+/R30 36 Tf
+1 0 0 1 272.562 492 Tm
+(Implementation) Tj
+ET
+Q
+q
+W
+97.25 449.25 m
+734.25 449.25 l
+734.25 320.25 l
+97.25 320.25 l
+h
+n
+endstream
+endobj
+32 0 obj
+132
+endobj
+33 0 obj
+<< /Type /Font /Name /R33 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+34 0 obj
+<< /Length 35 0 R >>
+stream
+BT
+/R33 24 Tf
+1 0 0 1 98.5 422.25 Tm
+(\267 Used Matlab to generate and test beam coefficients, and to ) Tj
+1 0 0 1 116.5 398.25 Tm
+(verify beamformer output.) Tj
+1 0 0 1 98.5 350.25 Tm
+(\267 Developed C++ code to implement process networks and digital ) Tj
+1 0 0 1 116.562 326.25 Tm
+(interpolated beamforming.) Tj
+ET
+Q
+q
+W
+127.75 289.5 m
+690.25 289.5 l
+690.25 109.5 l
+127.75 109.5 l
+h
+n
+BT
+/R33 18 Tf
+1 0 0 1 129 266.5 Tm
+(\267 Used existing Pthread and timer classes.) Tj
+1 0 0 1 129 228.5 Tm
+(\267 Developed a Process Network queue class.) Tj
+1 0 0 1 129 190.5 Tm
+(\267 Developed a sparse FIR filter \(using coefficients from Matlab\).) Tj
+1 0 0 1 129 152.5 Tm
+(\267 Developed other \(more optimized\) beamforming kernels.) Tj
+1 0 0 1 129.062 114.5 Tm
+(\267 Developed several different beamforming implementations for comparison.) Tj
+ET
+Q
+endstream
+endobj
+35 0 obj
+841
+endobj
+27 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R33 33 0 R
+/R30 30 0 R
+>>
+>>
+/Contents [
+28 0 R
+31 0 R
+34 0 R
+]
+>>
+endobj
+37 0 obj
+<< /Length 38 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 541.5 m
+743.25 541.5 l
+743.25 508.5 l
+47.75 508.5 l
+h
+n
+endstream
+endobj
+38 0 obj
+409
+endobj
+39 0 obj
+<< /Type /Font /Name /R39 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+40 0 obj
+<< /Length 41 0 R >>
+stream
+BT
+/R39 24 Tf
+1 0 0 1 237.812 514.5 Tm
+(Process Networks Queue Class) Tj
+ET
+Q
+q
+W
+119.75 478.5 m
+707.25 478.5 l
+707.25 105.5 l
+119.75 105.5 l
+h
+n
+1 i
+132 461.75 m
+138 467.75 l
+144 461.75 l
+138 455.75 l
+132 461.75 l
+f*
+138 467.75 m
+138.008 467.75 l
+138.008 467.742 l
+132.008 461.742 l
+132 461.742 l
+132 461.75 l
+f
+138 467.75 m
+138.008 467.75 l
+144.008 461.75 l
+144.008 461.742 l
+144 461.742 l
+138 467.742 l
+f
+144 461.75 m
+144.008 461.75 l
+144.008 461.742 l
+138.008 455.742 l
+138 455.742 l
+138 455.75 l
+f
+132 461.75 m
+132.008 461.75 l
+138.008 455.75 l
+138.008 455.742 l
+138 455.742 l
+132 461.742 l
+f
+endstream
+endobj
+41 0 obj
+598
+endobj
+42 0 obj
+<< /Type /Font /Name /R42 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+43 0 obj
+<< /Length 44 0 R >>
+stream
+BT
+/R42 18 Tf
+1 0 0 1 148 455.5 Tm
+(Each process is a POSIX thread, and UNIX does the scheduling.) Tj
+ET
+132 435.75 m
+138 441.75 l
+144 435.75 l
+138 429.75 l
+132 435.75 l
+f*
+138 441.75 m
+138.008 441.75 l
+138.008 441.742 l
+132.008 435.742 l
+132 435.742 l
+132 435.75 l
+f
+138 441.75 m
+138.008 441.75 l
+144.008 435.75 l
+144.008 435.742 l
+144 435.742 l
+138 441.742 l
+f
+144 435.75 m
+144.008 435.75 l
+144.008 435.742 l
+138.008 429.742 l
+138 429.742 l
+138 429.75 l
+f
+132 435.75 m
+132.008 435.75 l
+138.008 429.75 l
+138.008 429.742 l
+138 429.742 l
+132 435.742 l
+f
+BT
+1 0 0 1 148 429.5 Tm
+(Use Parks' rules for dynamic scheduling of process networks:) Tj
+ET
+172 407.75 m
+176 411.75 l
+180 407.75 l
+176 403.75 l
+172 407.75 l
+f*
+176 411.75 m
+176.008 411.75 l
+176.008 411.742 l
+172.008 407.742 l
+172 407.742 l
+172 407.75 l
+f
+176 411.75 m
+176.008 411.75 l
+180.008 407.75 l
+180.008 407.742 l
+180 407.742 l
+176 411.742 l
+f
+180 407.75 m
+180.008 407.75 l
+180.008 407.742 l
+176.008 403.742 l
+176 403.742 l
+176 403.75 l
+f
+172 407.75 m
+172.008 407.75 l
+176.008 403.75 l
+176.008 403.742 l
+176 403.742 l
+172 407.742 l
+f
+BT
+1 0 0 1 184 403.5 Tm
+(A processes blocks if it reads from an empty queue.) Tj
+ET
+172 381.75 m
+176 385.75 l
+180 381.75 l
+176 377.75 l
+172 381.75 l
+f*
+176 385.75 m
+176.008 385.75 l
+176.008 385.742 l
+172.008 381.742 l
+172 381.742 l
+172 381.75 l
+f
+176 385.75 m
+176.008 385.75 l
+180.008 381.75 l
+180.008 381.742 l
+180 381.742 l
+176 385.742 l
+f
+180 381.75 m
+180.008 381.75 l
+180.008 381.742 l
+176.008 377.742 l
+176 377.742 l
+176 377.75 l
+f
+172 381.75 m
+172.008 381.75 l
+176.008 377.75 l
+176.008 377.742 l
+176 377.742 l
+172 381.742 l
+f
+BT
+1 0 0 1 184 377.5 Tm
+(A process blocks if it writes to a full queue.) Tj
+ET
+172 355.75 m
+176 359.75 l
+180 355.75 l
+176 351.75 l
+172 355.75 l
+f*
+176 359.75 m
+176.008 359.75 l
+176.008 359.742 l
+172.008 355.742 l
+172 355.742 l
+172 355.75 l
+f
+176 359.75 m
+176.008 359.75 l
+180.008 355.75 l
+180.008 355.742 l
+180 355.742 l
+176 359.742 l
+f
+180 355.75 m
+180.008 355.75 l
+180.008 355.742 l
+176.008 351.742 l
+176 351.742 l
+176 351.75 l
+f
+172 355.75 m
+172.008 355.75 l
+176.008 351.75 l
+176.008 351.742 l
+176 351.742 l
+172 355.742 l
+f
+BT
+1 0 0 1 184 351.5 Tm
+(\(We assume that queues are large enough to avoid artificial deadlock, ) Tj
+1 0 0 1 184 325.5 Tm
+(and that the program is not unbounded.\)) Tj
+ET
+132 305.75 m
+138 311.75 l
+144 305.75 l
+138 299.75 l
+132 305.75 l
+f*
+138 311.75 m
+138.008 311.75 l
+138.008 311.742 l
+132.008 305.742 l
+132 305.742 l
+132 305.75 l
+f
+138 311.75 m
+138.008 311.75 l
+144.008 305.75 l
+144.008 305.742 l
+144 305.742 l
+138 311.742 l
+f
+144 305.75 m
+144.008 305.75 l
+144.008 305.742 l
+138.008 299.742 l
+138 299.742 l
+138 299.75 l
+f
+132 305.75 m
+132.008 305.75 l
+138.008 299.75 l
+138.008 299.742 l
+138 299.742 l
+132 305.742 l
+f
+BT
+1 0 0 1 148 299.5 Tm
+(Borrow the idea of a firing threshold \() Tj
+/R39 18 Tf
+1 0 0 1 422.5 299.5 Tm
+(Tp) Tj
+/R42 18 Tf
+1 0 0 1 444.514 299.5 Tm
+(\) from Karp and Miller.) Tj
+ET
+172 277.75 m
+176 281.75 l
+180 277.75 l
+176 273.75 l
+172 277.75 l
+f*
+176 281.75 m
+176.008 281.75 l
+176.008 281.742 l
+172.008 277.742 l
+172 277.742 l
+172 277.75 l
+f
+176 281.75 m
+176.008 281.75 l
+180.008 277.75 l
+180.008 277.742 l
+180 277.742 l
+176 281.742 l
+f
+180 277.75 m
+180.008 277.75 l
+180.008 277.742 l
+176.008 273.742 l
+176 273.742 l
+176 273.75 l
+f
+172 277.75 m
+172.008 277.75 l
+176.008 273.75 l
+176.008 273.742 l
+176 273.742 l
+172 277.742 l
+f
+BT
+1 0 0 1 184 273.5 Tm
+(Queue threshold is max[ Up, Wp, Tp ].) Tj
+ET
+132 253.75 m
+138 259.75 l
+144 253.75 l
+138 247.75 l
+132 253.75 l
+f*
+138 259.75 m
+138.008 259.75 l
+138.008 259.742 l
+132.008 253.742 l
+132 253.742 l
+132 253.75 l
+f
+138 259.75 m
+138.008 259.75 l
+144.008 253.75 l
+144.008 253.742 l
+144 253.742 l
+138 259.742 l
+f
+144 253.75 m
+144.008 253.75 l
+144.008 253.742 l
+138.008 247.742 l
+138 247.742 l
+138 247.75 l
+f
+132 253.75 m
+132.008 253.75 l
+138.008 247.75 l
+138.008 247.742 l
+138 247.742 l
+132 253.742 l
+f
+BT
+1 0 0 1 148 247.5 Tm
+(Intended to be optimized for DSP applications:) Tj
+ET
+172 225.75 m
+176 229.75 l
+180 225.75 l
+176 221.75 l
+172 225.75 l
+f*
+176 229.75 m
+176.008 229.75 l
+176.008 229.742 l
+172.008 225.742 l
+172 225.742 l
+172 225.75 l
+f
+176 229.75 m
+176.008 229.75 l
+180.008 225.75 l
+180.008 225.742 l
+180 225.742 l
+176 229.742 l
+f
+180 225.75 m
+180.008 225.75 l
+180.008 225.742 l
+176.008 221.742 l
+176 221.742 l
+176 221.75 l
+f
+172 225.75 m
+172.008 225.75 l
+176.008 221.75 l
+176.008 221.742 l
+176 221.742 l
+172 225.742 l
+f
+BT
+1 0 0 1 184 221.5 Tm
+(Processes operate directly from queue memory, so that no data has to be ) Tj
+1 0 0 1 184 195.5 Tm
+(copied.) Tj
+ET
+172 173.75 m
+176 177.75 l
+180 173.75 l
+176 169.75 l
+172 173.75 l
+f*
+176 177.75 m
+176.008 177.75 l
+176.008 177.742 l
+172.008 173.742 l
+172 173.742 l
+172 173.75 l
+f
+176 177.75 m
+176.008 177.75 l
+180.008 173.75 l
+180.008 173.742 l
+180 173.742 l
+176 177.742 l
+f
+180 173.75 m
+180.008 173.75 l
+180.008 173.742 l
+176.008 169.742 l
+176 169.742 l
+176 169.75 l
+f
+172 173.75 m
+172.008 173.75 l
+176.008 169.75 l
+176.008 169.742 l
+176 169.742 l
+172 173.742 l
+f
+BT
+1 0 0 1 184 169.5 Tm
+(Data is guaranteed to be contiguous in memory to make up for the lack ) Tj
+1 0 0 1 184 143.5 Tm
+(of circular addressing modes on a general-purpose processor.) Tj
+ET
+172 121.75 m
+176 125.75 l
+180 121.75 l
+176 117.75 l
+172 121.75 l
+f*
+176 125.75 m
+176.008 125.75 l
+176.008 125.742 l
+172.008 121.742 l
+172 121.742 l
+172 121.75 l
+f
+176 125.75 m
+176.008 125.75 l
+180.008 121.75 l
+180.008 121.742 l
+180 121.742 l
+176 125.742 l
+f
+180 121.75 m
+180.008 121.75 l
+180.008 121.742 l
+176.008 117.742 l
+176 117.742 l
+176 117.75 l
+f
+172 121.75 m
+172.008 121.75 l
+176.008 117.75 l
+176.008 117.742 l
+176 117.742 l
+172 121.742 l
+f
+BT
+1 0 0 1 184.062 117.5 Tm
+(There is a tradeoff between memory usage and performance.) Tj
+ET
+Q
+endstream
+endobj
+44 0 obj
+5767
+endobj
+36 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R42 42 0 R
+/R39 39 0 R
+>>
+>>
+/Contents [
+37 0 R
+40 0 R
+43 0 R
+]
+>>
+endobj
+46 0 obj
+<< /Length 47 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 537 m
+743.25 537 l
+743.25 504 l
+47.75 504 l
+h
+n
+endstream
+endobj
+47 0 obj
+401
+endobj
+48 0 obj
+<< /Type /Font /Name /R48 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+49 0 obj
+<< /Length 50 0 R >>
+stream
+BT
+/R48 24 Tf
+1 0 0 1 235.312 510 Tm
+(Beamforming Implementations) Tj
+ET
+Q
+q
+W
+133.25 485.25 m
+716.25 485.25 l
+716.25 452.25 l
+133.25 452.25 l
+h
+n
+endstream
+endobj
+50 0 obj
+147
+endobj
+51 0 obj
+<< /Type /Font /Name /R51 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+52 0 obj
+<< /Length 53 0 R >>
+stream
+BT
+/R51 24 Tf
+1 0 0 1 134.562 458.25 Tm
+(\267 Batch-mode, with a single thread of execution.) Tj
+ET
+Q
+q
+W
+133.25 377.25 m
+716.25 377.25 l
+716.25 344.25 l
+133.25 344.25 l
+h
+n
+BT
+/R51 24 Tf
+1 0 0 1 134.562 350.25 Tm
+(\267 Batch-mode, with multiple threads of execution.) Tj
+ET
+Q
+q
+W
+133.25 287.25 m
+716.25 287.25 l
+716.25 254.25 l
+133.25 254.25 l
+h
+n
+BT
+/R51 24 Tf
+1 0 0 1 134.562 260.25 Tm
+(\267 Process Network, with a single thread beamformer.) Tj
+ET
+Q
+q
+W
+133.25 161.25 m
+716.25 161.25 l
+716.25 128.25 l
+133.25 128.25 l
+h
+n
+BT
+/R51 24 Tf
+1 0 0 1 134.562 134.25 Tm
+(\267 Process Network, with a multi-threaded beamformer.) Tj
+ET
+Q
+q
+W
+154.75 348 m
+717.25 348 l
+717.25 301 l
+154.75 301 l
+h
+n
+BT
+/R51 18 Tf
+1 0 0 1 156 325 Tm
+(\267 Multiple threads divide the task of calculation.) Tj
+1 0 0 1 156.062 306 Tm
+(\267 How the task is divided can greatly affect the performance.) Tj
+ET
+Q
+q
+W
+154.75 132 m
+717.25 132 l
+717.25 85 l
+154.75 85 l
+h
+n
+BT
+/R51 18 Tf
+1 0 0 1 156 109 Tm
+(\267 Multiple threads divide the task of calculation.) Tj
+1 0 0 1 156.062 90 Tm
+(\267 \252Thread pools\272 -- merging DSP and workstation algorithms.) Tj
+ET
+Q
+q
+W
+154.75 456 m
+717.25 456 l
+717.25 390 l
+154.75 390 l
+h
+n
+BT
+/R51 18 Tf
+1 0 0 1 156 433 Tm
+(\267 All sensor data is read into memory.) Tj
+1 0 0 1 156 414 Tm
+(\267 One task calculates results from memory to memory.) Tj
+1 0 0 1 156.062 395 Tm
+(\267 All results are written out to disk.) Tj
+ET
+Q
+q
+W
+154.75 258 m
+717.25 258 l
+717.25 173 l
+154.75 173 l
+h
+n
+BT
+/R51 18 Tf
+1 0 0 1 156 235 Tm
+(\267 A producer thread and a consumer thread provide an interface from ) Tj
+1 0 0 1 174 216 Tm
+(memory to Process Network queues.) Tj
+1 0 0 1 156 197 Tm
+(\267 A beamforming thread takes samples from the producer, calculates the ) Tj
+1 0 0 1 174.062 178 Tm
+(result, and sends it to the consumer.) Tj
+ET
+Q
+endstream
+endobj
+53 0 obj
+1826
+endobj
+45 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R51 51 0 R
+/R48 48 0 R
+>>
+>>
+/Contents [
+46 0 R
+49 0 R
+52 0 R
+]
+>>
+endobj
+55 0 obj
+<< /Length 56 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 546 m
+743.25 546 l
+743.25 513 l
+47.75 513 l
+h
+n
+endstream
+endobj
+56 0 obj
+401
+endobj
+57 0 obj
+<< /Type /Font /Name /R57 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+58 0 obj
+<< /Length 59 0 R >>
+stream
+BT
+/R57 24 Tf
+1 0 0 1 233.312 519 Tm
+(Dividing The Beamforming Job) Tj
+ET
+Q
+q
+W
+115.25 494.25 m
+428.25 494.25 l
+428.25 461.25 l
+115.25 461.25 l
+h
+n
+endstream
+endobj
+59 0 obj
+148
+endobj
+60 0 obj
+<< /Type /Font /Name /R60 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+61 0 obj
+<< /Length 62 0 R >>
+stream
+BT
+/R60 24 Tf
+1 0 0 1 116.562 467.25 Tm
+(\267 Divide by beams) Tj
+ET
+Q
+q
+W
+115.25 341.25 m
+428.25 341.25 l
+428.25 308.25 l
+115.25 308.25 l
+h
+n
+BT
+/R60 24 Tf
+1 0 0 1 116.562 314.25 Tm
+(\267 Divide by samples) Tj
+ET
+Q
+q
+W
+115.25 197.25 m
+725.25 197.25 l
+725.25 164.25 l
+115.25 164.25 l
+h
+n
+BT
+/R60 24 Tf
+1 0 0 1 116.562 170.25 Tm
+(\267 Tips for performance.) Tj
+ET
+Q
+q
+W
+136.75 465 m
+384.25 465 l
+384.25 361 l
+136.75 361 l
+h
+n
+BT
+/R60 18 Tf
+1 0 0 1 138 442 Tm
+(\267) Tj
+1 0 0 1 156 442 Tm
+(\252Partial Beamforming\272.) Tj
+1 0 0 1 138 423 Tm
+(\267) Tj
+1 0 0 1 156 423 Tm
+(Low latency.) Tj
+1 0 0 1 138 404 Tm
+(\267) Tj
+1 0 0 1 156 404 Tm
+(Low memory use.) Tj
+1 0 0 1 138 385 Tm
+(\267) Tj
+1 0 0 1 156 385 Tm
+(Poor cache utilization.) Tj
+1 0 0 1 138 366 Tm
+(\267) Tj
+1 0 0 1 156.062 366 Tm
+(A \252DSP\272 approach) Tj
+ET
+Q
+q
+W
+136.75 303 m
+384.25 303 l
+384.25 218 l
+136.75 218 l
+h
+n
+BT
+/R60 18 Tf
+1 0 0 1 138 280 Tm
+(\267) Tj
+1 0 0 1 156 280 Tm
+(Good cache utilization.) Tj
+1 0 0 1 138 261 Tm
+(\267) Tj
+1 0 0 1 156 261 Tm
+(Higher latency.) Tj
+1 0 0 1 138 242 Tm
+(\267) Tj
+1 0 0 1 156 242 Tm
+(More memory usage.) Tj
+1 0 0 1 138 223 Tm
+(\267) Tj
+1 0 0 1 156.062 223 Tm
+(A \252workstation\272 approach.) Tj
+ET
+Q
+q
+1 g
+524.9 355.9 74.1 101.1 re
+f
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+2 w
+526 357 72 99 re
+S
+0.498039 G
+6 w
+535.062 454.5 m
+535.062 360.5 l
+S
+544.062 454.5 m
+544.062 360.5 l
+S
+553.062 454.5 m
+553.062 360.5 l
+S
+562.062 454.5 m
+562.062 360.5 l
+S
+571.062 454.5 m
+571.062 360.5 l
+S
+580.062 454.5 m
+580.062 360.5 l
+S
+589.062 454.5 m
+589.062 360.5 l
+S
+Q
+q
+1 g
+525 211.9 74.1 101.1 re
+f
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+2 w
+526.062 213 72 99 re
+S
+0.498039 G
+6 w
+527.562 303 m
+596.562 303 l
+S
+527.562 294 m
+596.562 294 l
+S
+527.562 285 m
+596.562 285 l
+S
+527.562 276 m
+596.562 276 l
+S
+527.562 267 m
+596.562 267 l
+S
+527.562 258 m
+596.562 258 l
+S
+527.562 249 m
+596.562 249 l
+S
+527.562 240 m
+596.562 240 l
+S
+527.562 231 m
+596.562 231 l
+S
+527.562 222 m
+596.562 222 l
+S
+Q
+q
+W
+524.75 483 m
+599.25 483 l
+599.25 458.5 l
+524.75 458.5 l
+h
+n
+BT
+/R60 14 Tf
+1 0 0 1 531.562 462 Tm
+(<-beams->) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+-4969.25 5582.25 m
+-4969 5582.25 l
+-4968.75 5582 l
+-4968.75 5581.75 l
+-4969 5581.75 l
+-4969.25 5582 l
+f
+BT
+/R60 14 Tf
+0 -1 1 0 604.5 444 Tm
+(<-samples->) Tj
+ET
+Q
+q
+W
+524.75 339 m
+599.25 339 l
+599.25 314.5 l
+524.75 314.5 l
+h
+n
+BT
+/R60 14 Tf
+1 0 0 1 531.562 318 Tm
+(<-beams->) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+-4969.25 5582.25 m
+-4969 5582.25 l
+-4968.75 5582 l
+-4968.75 5581.75 l
+-4969 5581.75 l
+-4969.25 5582 l
+f
+BT
+/R60 14 Tf
+0 -1 1 0 604.5 300 Tm
+(<-samples->) Tj
+ET
+Q
+q
+W
+136.75 159 m
+717.25 159 l
+717.25 93 l
+136.75 93 l
+h
+n
+BT
+/R60 18 Tf
+1 0 0 1 138 136 Tm
+(\267) Tj
+1 0 0 1 156 136 Tm
+(These are DSP algorithms, but they are running on a workstation.) Tj
+1 0 0 1 138 117 Tm
+(\267) Tj
+1 0 0 1 156 117 Tm
+(Throughput is more importatant than memory usage or latency.) Tj
+1 0 0 1 138 98 Tm
+(\267) Tj
+1 0 0 1 156.062 98 Tm
+(Keep each thread's kernel calculations in the cache.) Tj
+ET
+Q
+endstream
+endobj
+62 0 obj
+3071
+endobj
+54 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R60 60 0 R
+/R57 57 0 R
+>>
+>>
+/Contents [
+55 0 R
+58 0 R
+61 0 R
+]
+>>
+endobj
+64 0 obj
+<< /Length 65 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 564 m
+743.25 564 l
+743.25 519 l
+47.75 519 l
+h
+n
+endstream
+endobj
+65 0 obj
+401
+endobj
+66 0 obj
+<< /Type /Font /Name /R66 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+67 0 obj
+<< /Length 68 0 R >>
+stream
+BT
+/R66 36 Tf
+1 0 0 1 339.562 528 Tm
+(Results) Tj
+ET
+Q
+q
+W
+88.25 512.25 m
+725.25 512.25 l
+725.25 389.25 l
+88.25 389.25 l
+h
+n
+endstream
+endobj
+68 0 obj
+125
+endobj
+69 0 obj
+<< /Type /Font /Name /R69 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+70 0 obj
+<< /Length 71 0 R >>
+stream
+BT
+/R69 18 Tf
+1 0 0 1 89.5 489.25 Tm
+(\267) Tj
+1 0 0 1 107.5 489.25 Tm
+(Used average time over 10 trials to calculate 10000 beam sets.) Tj
+1 0 0 1 89.5 470.25 Tm
+(\267) Tj
+1 0 0 1 107.5 470.25 Tm
+(All cases divided computation by samples, for best performance.) Tj
+1 0 0 1 89.5 451.25 Tm
+(\267) Tj
+1 0 0 1 107.5 451.25 Tm
+(Benchmarks performed on a Sun Ultra-2 workstation with dual 300 MHz ) Tj
+1 0 0 1 107.5 432.25 Tm
+(UltraSPARC-II CPUs.) Tj
+1 0 0 1 89.5 413.25 Tm
+(\267) Tj
+1 0 0 1 107.5 413.25 Tm
+(4 CPU benchmarks performed on a Sun SPARCserver 670MP workstation with quad ) Tj
+1 0 0 1 107.562 394.25 Tm
+(72 MHz HyperSPARC CPUs.) Tj
+ET
+Q
+q
+W
+47.75 231 m
+743.25 231 l
+743.25 198 l
+47.75 198 l
+h
+n
+BT
+/R66 24 Tf
+1 0 0 1 340.312 204 Tm
+(Comments) Tj
+ET
+Q
+q
+W
+88.25 188.25 m
+725.25 188.25 l
+725.25 84.25 l
+88.25 84.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 89.5 165.25 Tm
+(\267 Kernel performance of about 19,000 samples per second per CPU.) Tj
+1 0 0 1 89.5 127.25 Tm
+(\267) Tj
+1 0 0 1 107.5 127.25 Tm
+(33% overhead for process networks.) Tj
+1 0 0 1 89.5 89.25 Tm
+(\267) Tj
+1 0 0 1 107.562 89.25 Tm
+(Process network overhead is inflated because of data copying.) Tj
+ET
+Q
+q
+W
+175.5 315.25 m
+307.25 315.25 l
+307.25 286.75 l
+175.5 286.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 197.312 292.25 Tm
+(Batch-mode) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+181 282.25 m
+599.25 282.25 l
+S
+Q
+q
+W
+175.5 288.25 m
+307.25 288.25 l
+307.25 259.75 l
+175.5 259.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 182.062 265.25 Tm
+(Process network) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+181 255.25 m
+599.25 255.25 l
+S
+181.062 309.25 m
+599.312 309.25 l
+S
+307.562 350.25 m
+307.562 254.75 l
+S
+Q
+q
+W
+180 360.25 m
+305.5 360.25 l
+305.5 312.75 l
+180 312.75 l
+h
+n
+BT
+/R66 18 Tf
+1 0 0 1 193.75 337.25 Tm
+(Beamformer) Tj
+1 0 0 1 226.312 318.25 Tm
+(type) Tj
+ET
+Q
+q
+W
+306 360.25 m
+381.5 360.25 l
+381.5 313.25 l
+306 313.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 313.75 337.25 Tm
+(Seconds) Tj
+1 0 0 1 319.562 318.25 Tm
+(1 CPU) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+379.5 350.25 m
+379.5 254.75 l
+S
+Q
+q
+W
+378 315.25 m
+453.5 315.25 l
+453.5 286.25 l
+378 286.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 395.562 292.25 Tm
+(0.270) Tj
+ET
+Q
+q
+W
+378 288.25 m
+453.5 288.25 l
+453.5 260.25 l
+378 260.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 395.562 265.25 Tm
+(0.360) Tj
+ET
+Q
+q
+W
+378 360.25 m
+453.5 360.25 l
+453.5 312.75 l
+378 312.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 385.75 337.25 Tm
+(Seconds) Tj
+1 0 0 1 388.062 318.25 Tm
+(2 CPUs) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+451.5 350.25 m
+451.5 254.75 l
+S
+Q
+q
+W
+450 360.25 m
+525.5 360.25 l
+525.5 313.25 l
+450 313.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 456.25 337.25 Tm
+(Speedup) Tj
+1 0 0 1 459.562 318.25 Tm
+(2 CPUs) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+523.5 350.25 m
+523.5 254.75 l
+S
+Q
+q
+W
+522 360.25 m
+597.5 360.25 l
+597.5 313.25 l
+522 313.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 528.75 337.25 Tm
+(Speedup) Tj
+1 0 0 1 532.062 318.25 Tm
+(4 CPUs) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+1 w
+595.5 350.25 m
+595.5 254.75 l
+S
+Q
+q
+W
+450 315.25 m
+525.5 315.25 l
+525.5 287 l
+450 287 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 470.812 292.25 Tm
+(97%) Tj
+ET
+Q
+q
+W
+450 288.25 m
+525.5 288.25 l
+525.5 259.75 l
+450 259.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 470.812 265.25 Tm
+(90%) Tj
+ET
+Q
+q
+W
+522 315.25 m
+597.5 315.25 l
+597.5 286.75 l
+522 286.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 538.812 292.25 Tm
+(290%) Tj
+ET
+Q
+q
+W
+522 288.25 m
+597.5 288.25 l
+597.5 259.75 l
+522 259.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 538.812 265.25 Tm
+(210%) Tj
+ET
+Q
+q
+W
+306 315.25 m
+381.5 315.25 l
+381.5 286.25 l
+306 286.25 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 323.562 292.25 Tm
+(0.532) Tj
+ET
+Q
+q
+W
+306 288.25 m
+381.5 288.25 l
+381.5 259.75 l
+306 259.75 l
+h
+n
+BT
+/R69 18 Tf
+1 0 0 1 323.562 265.25 Tm
+(0.682) Tj
+ET
+Q
+endstream
+endobj
+71 0 obj
+3758
+endobj
+63 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R69 69 0 R
+/R66 66 0 R
+>>
+>>
+/Contents [
+64 0 R
+67 0 R
+70 0 R
+]
+>>
+endobj
+73 0 obj
+<< /Length 74 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 528 m
+743.25 528 l
+743.25 483 l
+47.75 483 l
+h
+n
+endstream
+endobj
+74 0 obj
+401
+endobj
+75 0 obj
+<< /Type /Font /Name /R75 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+76 0 obj
+<< /Length 77 0 R >>
+stream
+BT
+/R75 36 Tf
+1 0 0 1 152.562 492 Tm
+(Expected Current Performance) Tj
+ET
+Q
+q
+W
+88.25 426.75 m
+725.25 426.75 l
+725.25 129.75 l
+88.25 129.75 l
+h
+n
+endstream
+endobj
+77 0 obj
+146
+endobj
+78 0 obj
+<< /Type /Font /Name /R78 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+79 0 obj
+<< /Length 80 0 R >>
+stream
+BT
+/R78 24 Tf
+1 0 0 1 89.5 399.75 Tm
+(\267) Tj
+1 0 0 1 107.5 399.75 Tm
+(The Process Networks queue has been rewritten for better ) Tj
+1 0 0 1 107.5 375.75 Tm
+(memory-to-memory operation, which should substantially ) Tj
+1 0 0 1 107.5 351.75 Tm
+(boost performance and reduce overhead. Previously, only ) Tj
+1 0 0 1 107.5 327.75 Tm
+(consumers operated out of queue memory.) Tj
+1 0 0 1 89.5 279.75 Tm
+(\267) Tj
+1 0 0 1 107.5 279.75 Tm
+(Beamformer kernel \(batch mode\) routines have reached ) Tj
+1 0 0 1 107.5 255.75 Tm
+(upwards of 35,000 samples per second per CPU \(better than ) Tj
+1 0 0 1 107.5 231.75 Tm
+(80% speedup\).) Tj
+1 0 0 1 89.5 183.75 Tm
+(\267) Tj
+1 0 0 1 107.5 183.75 Tm
+(Advanced Sonar Group \(ASG\)  just installed a quad 300 MHz ) Tj
+1 0 0 1 107.5 159.75 Tm
+(UltraSPARC-II workstation, and is ordering a workstation with ) Tj
+1 0 0 1 107.562 135.75 Tm
+(8 UltraSPARC-II CPUs running at 333 MHz.) Tj
+ET
+Q
+endstream
+endobj
+80 0 obj
+917
+endobj
+72 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R78 78 0 R
+/R75 75 0 R
+>>
+>>
+/Contents [
+73 0 R
+76 0 R
+79 0 R
+]
+>>
+endobj
+82 0 obj
+<< /Length 83 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 519 m
+743.25 519 l
+743.25 474 l
+47.75 474 l
+h
+n
+endstream
+endobj
+83 0 obj
+401
+endobj
+84 0 obj
+<< /Type /Font /Name /R84 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+85 0 obj
+<< /Length 86 0 R >>
+stream
+BT
+/R84 36 Tf
+1 0 0 1 309.562 483 Tm
+(Conclusion) Tj
+ET
+Q
+q
+W
+88.25 399.75 m
+734.25 399.75 l
+734.25 198.75 l
+88.25 198.75 l
+h
+n
+endstream
+endobj
+86 0 obj
+128
+endobj
+87 0 obj
+<< /Type /Font /Name /R87 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+88 0 obj
+<< /Length 89 0 R >>
+stream
+BT
+/R87 24 Tf
+1 0 0 1 89.5 372.75 Tm
+(\267) Tj
+1 0 0 1 107.5 372.75 Tm
+(Realization of a real-time beamformer on a Unix workstation is ) Tj
+1 0 0 1 107.5 348.75 Tm
+(on the horizon.) Tj
+1 0 0 1 89.5 300.75 Tm
+(\267) Tj
+1 0 0 1 107.5 300.75 Tm
+(A workstation beamformer could be implemented at a fraction ) Tj
+1 0 0 1 107.5 276.75 Tm
+(of the cost of custom hardware.) Tj
+1 0 0 1 89.5 228.75 Tm
+(\267 As workstations become even faster, custom hardware ) Tj
+1 0 0 1 107.562 204.75 Tm
+(beamformers may become obsolete.) Tj
+ET
+Q
+endstream
+endobj
+89 0 obj
+524
+endobj
+81 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R87 87 0 R
+/R84 84 0 R
+>>
+>>
+/Contents [
+82 0 R
+85 0 R
+88 0 R
+]
+>>
+endobj
+91 0 obj
+<< /Length 92 0 R >>
+stream
+q
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 G
+1 i
+1 w
+31 24 738 558 re
+S
+0 G
+8 w
+396.75 576.25 m
+751.75 576.25 l
+754.511 576.25 756.75 574.011 756.75 571.25 c
+756.75 41.25 l
+756.75 38.4886 754.511 36.25 751.75 36.25 c
+41.75 36.25 l
+38.9886 36.25 36.75 38.4886 36.75 41.25 c
+36.75 571.25 l
+36.75 574.011 38.9886 576.25 41.75 576.25 c
+s
+Q
+q
+W
+47.75 546 m
+743.25 546 l
+743.25 501 l
+47.75 501 l
+h
+n
+endstream
+endobj
+92 0 obj
+401
+endobj
+93 0 obj
+<< /Type /Font /Name /R93 /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+94 0 obj
+<< /Length 95 0 R >>
+stream
+BT
+/R93 36 Tf
+1 0 0 1 293.062 510 Tm
+(Future Work) Tj
+ET
+Q
+q
+W
+97.25 480.75 m
+734.25 480.75 l
+734.25 423.75 l
+97.25 423.75 l
+h
+n
+endstream
+endobj
+95 0 obj
+129
+endobj
+96 0 obj
+<< /Type /Font /Name /R96 /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+97 0 obj
+<< /Length 98 0 R >>
+stream
+BT
+/R96 24 Tf
+1 0 0 1 98.5 453.75 Tm
+(\267 A three-fan vertical beamformer with 3 digital interpolation ) Tj
+1 0 0 1 116.562 429.75 Tm
+(\(horizontal\) beamformers. Current estimate, 16 to 20 CPUs.) Tj
+ET
+Q
+q
+W
+97.25 134.25 m
+734.25 134.25 l
+734.25 101.25 l
+97.25 101.25 l
+h
+n
+BT
+/R96 24 Tf
+1 0 0 1 98.5625 107.25 Tm
+(\267 An entire real-time sonar on a workstation?) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+364 312 m
+354 302.5 l
+352 307 l
+350.25 311.25 l
+364 312 l
+f*
+364 312 m
+364.25 312 l
+364.25 311.75 l
+354.25 302.25 l
+354 302.25 l
+354 302.5 l
+f
+352 307 m
+352.25 307 l
+354.25 302.5 l
+354.25 302.25 l
+354 302.25 l
+352 306.75 l
+f
+350.25 311.25 m
+350.5 311.25 l
+352.25 307 l
+352.25 306.75 l
+352 306.75 l
+350.25 311 l
+f
+364 312 m
+364.25 312 l
+364.25 311.75 l
+350.5 311 l
+350.25 311 l
+350.25 311.25 l
+f
+351.5 307.5 m
+352.5 307.5 l
+352.5 306.5 l
+301.5 284.5 l
+300.5 284.5 l
+300.5 285.5 l
+f
+364.062 217.5 m
+350.312 218.25 l
+352.062 222.5 l
+354.062 227 l
+364.062 217.5 l
+f*
+350.312 218.25 m
+350.562 218.25 l
+364.312 217.5 l
+364.312 217.25 l
+364.062 217.25 l
+350.312 218 l
+f
+352.062 222.5 m
+352.312 222.5 l
+352.312 222.25 l
+350.562 218 l
+350.312 218 l
+350.312 218.25 l
+f
+354.062 227 m
+354.312 227 l
+354.312 226.75 l
+352.312 222.25 l
+352.062 222.25 l
+352.062 222.5 l
+f
+354.062 227 m
+354.312 227 l
+364.312 217.5 l
+364.312 217.25 l
+364.062 217.25 l
+354.062 226.75 l
+f
+300.562 245 m
+301.562 245 l
+352.562 223 l
+352.562 222 l
+351.562 222 l
+300.562 244 l
+f
+1 g
+166.562 334.5 m
+166.562 324.283 150.221 316 130.062 316 c
+109.904 316 93.5625 324.283 93.5625 334.5 c
+93.5625 344.717 109.904 353 130.062 353 c
+150.221 353 166.562 344.717 166.562 334.5 c
+f
+1 w
+166.062 334.5 m
+166.062 324.559 149.945 316.5 130.062 316.5 c
+110.18 316.5 94.0625 324.559 94.0625 334.5 c
+94.0625 344.441 110.18 352.5 130.062 352.5 c
+149.945 352.5 166.062 344.441 166.062 334.5 c
+s
+Q
+q
+W
+92.75 357 m
+167.25 357 l
+167.25 324 l
+92.75 324 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 114.75 339 Tm
+(sensor) Tj
+1 0 0 1 120.062 327 Tm
+(data) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+166.5 289.5 m
+166.5 279.283 150.158 271 130 271 c
+109.842 271 93.5 279.283 93.5 289.5 c
+93.5 299.717 109.842 308 130 308 c
+150.158 308 166.5 299.717 166.5 289.5 c
+f
+1 w
+166 289.5 m
+166 279.559 149.882 271.5 130 271.5 c
+110.118 271.5 94 279.559 94 289.5 c
+94 299.441 110.118 307.5 130 307.5 c
+149.882 307.5 166 299.441 166 289.5 c
+s
+Q
+q
+W
+92.75 312 m
+167.25 312 l
+167.25 279 l
+92.75 279 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 114.75 294 Tm
+(sensor) Tj
+1 0 0 1 120.062 282 Tm
+(data) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+166.5 244.5 m
+166.5 234.283 150.158 226 130 226 c
+109.842 226 93.5 234.283 93.5 244.5 c
+93.5 254.717 109.842 263 130 263 c
+150.158 263 166.5 254.717 166.5 244.5 c
+f
+1 w
+166 244.5 m
+166 234.559 149.882 226.5 130 226.5 c
+110.118 226.5 94 234.559 94 244.5 c
+94 254.441 110.118 262.5 130 262.5 c
+149.882 262.5 166 254.441 166 244.5 c
+s
+Q
+q
+W
+92.75 267 m
+167.25 267 l
+167.25 234 l
+92.75 234 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 114.75 249 Tm
+(sensor) Tj
+1 0 0 1 120.062 237 Tm
+(data) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+166.5 199.5 m
+166.5 189.283 150.158 181 130 181 c
+109.842 181 93.5 189.283 93.5 199.5 c
+93.5 209.717 109.842 218 130 218 c
+150.158 218 166.5 209.717 166.5 199.5 c
+f
+1 w
+166 199.5 m
+166 189.559 149.882 181.5 130 181.5 c
+110.118 181.5 94 189.559 94 199.5 c
+94 209.441 110.118 217.5 130 217.5 c
+149.882 217.5 166 209.441 166 199.5 c
+s
+Q
+q
+W
+92.75 222 m
+167.25 222 l
+167.25 189 l
+92.75 189 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 114.75 204 Tm
+(sensor) Tj
+1 0 0 1 120.062 192 Tm
+(data) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+364 267 m
+351 262.25 l
+351 267 l
+351 271.75 l
+364 267 l
+f*
+364 267 m
+364.25 267 l
+364.25 266.75 l
+351.25 262 l
+351 262 l
+351 262.25 l
+f
+0.25 w
+351.125 267 m
+351.125 262 l
+S
+351.125 271.75 m
+351.125 266.75 l
+S
+351 271.75 m
+351.25 271.75 l
+364.25 267 l
+364.25 266.75 l
+364 266.75 l
+351 271.5 l
+f
+1 w
+305 267 m
+351.5 267 l
+S
+1 g
+310.562 267 m
+310.562 244.356 292.206 226 269.562 226 c
+246.919 226 228.562 244.356 228.562 267 c
+228.562 289.644 246.919 308 269.562 308 c
+292.206 308 310.562 289.644 310.562 267 c
+f
+310.062 267 m
+310.062 244.632 291.93 226.5 269.562 226.5 c
+247.195 226.5 229.062 244.632 229.062 267 c
+229.062 289.368 247.195 307.5 269.562 307.5 c
+291.93 307.5 310.062 289.368 310.062 267 c
+s
+0 g
+238.062 294 m
+224.312 296.25 l
+226.812 300.25 l
+229.062 304.5 l
+238.062 294 l
+f*
+224.312 296.25 m
+224.562 296.25 l
+238.312 294 l
+238.312 293.75 l
+238.062 293.75 l
+224.312 296 l
+f
+226.812 300.25 m
+227.062 300.25 l
+227.062 300 l
+224.562 296 l
+224.312 296 l
+224.312 296.25 l
+f
+229.062 304.5 m
+229.312 304.5 l
+229.312 304.25 l
+227.062 300 l
+226.812 300 l
+226.812 300.25 l
+f
+229.062 304.5 m
+229.312 304.5 l
+238.312 294 l
+238.312 293.75 l
+238.062 293.75 l
+229.062 304.25 l
+f
+165.562 335 m
+166.562 335 l
+227.312 300.75 l
+227.312 299.75 l
+226.312 299.75 l
+165.562 334 l
+f
+238.062 240 m
+229.062 229.5 l
+226.812 233.75 l
+224.312 237.75 l
+238.062 240 l
+f*
+238.062 240 m
+238.312 240 l
+238.312 239.75 l
+229.312 229.25 l
+229.062 229.25 l
+229.062 229.5 l
+f
+226.812 233.75 m
+227.062 233.75 l
+229.312 229.5 l
+229.312 229.25 l
+229.062 229.25 l
+226.812 233.5 l
+f
+224.312 237.75 m
+224.562 237.75 l
+227.062 233.75 l
+227.062 233.5 l
+226.812 233.5 l
+224.312 237.5 l
+f
+238.062 240 m
+238.312 240 l
+238.312 239.75 l
+224.562 237.5 l
+224.312 237.5 l
+224.312 237.75 l
+f
+226.312 234.25 m
+227.312 234.25 l
+227.312 233.25 l
+166.562 199 l
+165.562 199 l
+165.562 200 l
+f
+229.062 276 m
+215.312 274 l
+216.312 278.75 l
+217.312 283.25 l
+229.062 276 l
+f*
+229.062 276 m
+229.312 276 l
+229.312 275.75 l
+215.562 273.75 l
+215.312 273.75 l
+215.312 274 l
+f
+216.312 278.75 m
+216.562 278.75 l
+216.562 278.5 l
+215.562 273.75 l
+215.312 273.75 l
+215.312 274 l
+f
+217.312 283.25 m
+217.562 283.25 l
+217.562 283 l
+216.562 278.5 l
+216.312 278.5 l
+216.312 278.75 l
+f
+217.312 283.25 m
+217.562 283.25 l
+229.312 276 l
+229.312 275.75 l
+229.062 275.75 l
+217.312 283 l
+f
+165.562 290 m
+166.562 290 l
+216.812 279.25 l
+216.812 278.25 l
+215.812 278.25 l
+165.562 289 l
+f
+229.062 258 m
+217.312 250.75 l
+216.312 255.25 l
+215.312 260 l
+229.062 258 l
+f*
+229.062 258 m
+229.312 258 l
+229.312 257.75 l
+217.562 250.5 l
+217.312 250.5 l
+217.312 250.75 l
+f
+216.312 255.25 m
+216.562 255.25 l
+217.562 250.75 l
+217.562 250.5 l
+217.312 250.5 l
+216.312 255 l
+f
+215.312 260 m
+215.562 260 l
+216.562 255.25 l
+216.562 255 l
+216.312 255 l
+215.312 259.75 l
+f
+215.312 260 m
+215.562 260 l
+229.312 258 l
+229.312 257.75 l
+229.062 257.75 l
+215.312 259.75 l
+f
+215.812 255.75 m
+216.812 255.75 l
+216.812 254.75 l
+166.562 244 l
+165.562 244 l
+165.562 245 l
+f
+Q
+q
+W
+169.25 362.5 m
+233.75 362.5 l
+233.75 329.5 l
+169.25 329.5 l
+h
+n
+endstream
+endobj
+98 0 obj
+6680
+endobj
+99 0 obj
+<< /Type /Font /Name /R99 /Subtype /Type1 /BaseFont /Times-Italic >>
+endobj
+100 0 obj
+<< /Length 101 0 R >>
+stream
+BT
+/R99 12 Tf
+1 0 0 1 176 344.5 Tm
+(40 MB/sec) Tj
+1 0 0 1 190.312 332.5 Tm
+(each) Tj
+ET
+Q
+q
+W
+232.25 299.5 m
+304.75 299.5 l
+304.75 254.5 l
+232.25 254.5 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 244.75 281.5 Tm
+(Three-fan) Tj
+1 0 0 1 249.25 269.5 Tm
+(Vertical) Tj
+1 0 0 1 238.312 257.5 Tm
+(Beamformer) Tj
+ET
+Q
+q
+W
+299.75 362.5 m
+364.25 362.5 l
+364.25 329.5 l
+299.75 329.5 l
+h
+n
+BT
+/R99 12 Tf
+1 0 0 1 306.5 344.5 Tm
+(32 MB/sec) Tj
+1 0 0 1 320.812 332.5 Tm
+(each) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+445.5 325.5 m
+445.5 302.856 427.144 284.5 404.5 284.5 c
+381.856 284.5 363.5 302.856 363.5 325.5 c
+363.5 348.144 381.856 366.5 404.5 366.5 c
+427.144 366.5 445.5 348.144 445.5 325.5 c
+f
+1 w
+445 325.5 m
+445 303.132 426.868 285 404.5 285 c
+382.132 285 364 303.132 364 325.5 c
+364 347.868 382.132 366 404.5 366 c
+426.868 366 445 347.868 445 325.5 c
+s
+445.562 267 m
+445.562 244.356 427.206 226 404.562 226 c
+381.919 226 363.562 244.356 363.562 267 c
+363.562 289.644 381.919 308 404.562 308 c
+427.206 308 445.562 289.644 445.562 267 c
+f
+445.062 267 m
+445.062 244.632 426.93 226.5 404.562 226.5 c
+382.195 226.5 364.062 244.632 364.062 267 c
+364.062 289.368 382.195 307.5 404.562 307.5 c
+426.93 307.5 445.062 289.368 445.062 267 c
+s
+445.562 208.5 m
+445.562 185.856 427.206 167.5 404.562 167.5 c
+381.919 167.5 363.562 185.856 363.562 208.5 c
+363.562 231.144 381.919 249.5 404.562 249.5 c
+427.206 249.5 445.562 231.144 445.562 208.5 c
+f
+445.062 208.5 m
+445.062 186.132 426.93 168 404.562 168 c
+382.195 168 364.062 186.132 364.062 208.5 c
+364.062 230.868 382.195 249 404.562 249 c
+426.93 249 445.062 230.868 445.062 208.5 c
+s
+Q
+q
+W
+367.25 358 m
+439.75 358 l
+439.75 313 l
+367.25 313 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 386.75 340 Tm
+(Digital) Tj
+1 0 0 1 372.5 328 Tm
+(Interpolation) Tj
+1 0 0 1 373.312 316 Tm
+(Beamformer) Tj
+ET
+Q
+q
+W
+367.25 299.5 m
+439.75 299.5 l
+439.75 254.5 l
+367.25 254.5 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 386.75 281.5 Tm
+(Digital) Tj
+1 0 0 1 372.5 269.5 Tm
+(Interpolation) Tj
+1 0 0 1 373.312 257.5 Tm
+(Beamformer) Tj
+ET
+Q
+q
+W
+367.25 241 m
+439.75 241 l
+439.75 196 l
+367.25 196 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 386.75 223 Tm
+(Digital) Tj
+1 0 0 1 372.5 211 Tm
+(Interpolation) Tj
+1 0 0 1 373.312 199 Tm
+(Beamformer) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+553.5 325.5 m
+553.5 312.797 535.144 302.5 512.5 302.5 c
+489.856 302.5 471.5 312.797 471.5 325.5 c
+471.5 338.203 489.856 348.5 512.5 348.5 c
+535.144 348.5 553.5 338.203 553.5 325.5 c
+f
+1 w
+553 325.5 m
+553 313.074 534.868 303 512.5 303 c
+490.132 303 472 313.074 472 325.5 c
+472 337.926 490.132 348 512.5 348 c
+534.868 348 553 337.926 553 325.5 c
+s
+Q
+q
+W
+475.25 348 m
+549.75 348 l
+549.75 315 l
+475.25 315 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 491.75 330 Tm
+(complex) Tj
+1 0 0 1 488.812 318 Tm
+(band shift) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+472.25 324 m
+459.25 319.25 l
+459.25 324 l
+459.25 328.75 l
+472.25 324 l
+f*
+472.25 324 m
+472.5 324 l
+472.5 323.75 l
+459.5 319 l
+459.25 319 l
+459.25 319.25 l
+f
+0.25 w
+459.375 324 m
+459.375 319 l
+S
+459.375 328.75 m
+459.375 323.75 l
+S
+459.25 328.75 m
+459.5 328.75 l
+472.5 324 l
+472.5 323.75 l
+472.25 323.75 l
+459.25 328.5 l
+f
+1 w
+444.75 324 m
+459.75 324 l
+S
+1 g
+661.562 325.5 m
+661.562 312.797 643.206 302.5 620.562 302.5 c
+597.919 302.5 579.562 312.797 579.562 325.5 c
+579.562 338.203 597.919 348.5 620.562 348.5 c
+643.206 348.5 661.562 338.203 661.562 325.5 c
+f
+661.062 325.5 m
+661.062 313.074 642.93 303 620.562 303 c
+598.195 303 580.062 313.074 580.062 325.5 c
+580.062 337.926 598.195 348 620.562 348 c
+642.93 348 661.062 337.926 661.062 325.5 c
+s
+Q
+q
+W
+583.25 348 m
+657.75 348 l
+657.75 315 l
+583.25 315 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 590.25 330 Tm
+(downsample) Tj
+1 0 0 1 610.062 318 Tm
+(by 8) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+580.25 324 m
+567.25 319.25 l
+567.25 324 l
+567.25 328.75 l
+580.25 324 l
+f*
+580.25 324 m
+580.5 324 l
+580.5 323.75 l
+567.5 319 l
+567.25 319 l
+567.25 319.25 l
+f
+0.25 w
+567.375 324 m
+567.375 319 l
+S
+567.375 328.75 m
+567.375 323.75 l
+S
+567.25 328.75 m
+567.5 328.75 l
+580.5 324 l
+580.5 323.75 l
+580.25 323.75 l
+567.25 328.5 l
+f
+1 w
+552.75 324 m
+567.75 324 l
+S
+688.312 324 m
+675.312 319.25 l
+675.312 324 l
+675.312 328.75 l
+688.312 324 l
+f*
+688.312 324 m
+688.562 324 l
+688.562 323.75 l
+675.562 319 l
+675.312 319 l
+675.312 319.25 l
+f
+0.25 w
+675.438 324 m
+675.438 319 l
+S
+675.438 328.75 m
+675.438 323.75 l
+S
+675.312 328.75 m
+675.562 328.75 l
+688.562 324 l
+688.562 323.75 l
+688.312 323.75 l
+675.312 328.5 l
+f
+1 w
+660.812 324 m
+675.812 324 l
+S
+Q
+q
+W
+439.25 380.5 m
+503.75 380.5 l
+503.75 347.5 l
+439.25 347.5 l
+h
+n
+BT
+/R99 12 Tf
+1 0 0 1 446 362.5 Tm
+(24 MB/sec) Tj
+1 0 0 1 460.312 350.5 Tm
+(each) Tj
+ET
+Q
+q
+W
+641.75 380.5 m
+706.25 380.5 l
+706.25 347.5 l
+641.75 347.5 l
+h
+n
+BT
+/R99 12 Tf
+1 0 0 1 651.5 362.5 Tm
+(6 MB/sec) Tj
+1 0 0 1 662.812 350.5 Tm
+(each) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 g
+1 i
+553.5 267 m
+553.5 254.297 535.144 244 512.5 244 c
+489.856 244 471.5 254.297 471.5 267 c
+471.5 279.703 489.856 290 512.5 290 c
+535.144 290 553.5 279.703 553.5 267 c
+f
+1 w
+553 267 m
+553 254.574 534.868 244.5 512.5 244.5 c
+490.132 244.5 472 254.574 472 267 c
+472 279.426 490.132 289.5 512.5 289.5 c
+534.868 289.5 553 279.426 553 267 c
+s
+Q
+q
+W
+475.25 289.5 m
+549.75 289.5 l
+549.75 256.5 l
+475.25 256.5 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 491.75 271.5 Tm
+(complex) Tj
+1 0 0 1 488.812 259.5 Tm
+(band shift) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+472.25 265.5 m
+459.25 260.75 l
+459.25 265.5 l
+459.25 270.25 l
+472.25 265.5 l
+f*
+472.25 265.5 m
+472.5 265.5 l
+472.5 265.25 l
+459.5 260.5 l
+459.25 260.5 l
+459.25 260.75 l
+f
+0.25 w
+459.375 265.5 m
+459.375 260.5 l
+S
+459.375 270.25 m
+459.375 265.25 l
+S
+459.25 270.25 m
+459.5 270.25 l
+472.5 265.5 l
+472.5 265.25 l
+472.25 265.25 l
+459.25 270 l
+f
+1 w
+444.75 265.5 m
+459.75 265.5 l
+S
+1 g
+661.562 267 m
+661.562 254.297 643.206 244 620.562 244 c
+597.919 244 579.562 254.297 579.562 267 c
+579.562 279.703 597.919 290 620.562 290 c
+643.206 290 661.562 279.703 661.562 267 c
+f
+661.062 267 m
+661.062 254.574 642.93 244.5 620.562 244.5 c
+598.195 244.5 580.062 254.574 580.062 267 c
+580.062 279.426 598.195 289.5 620.562 289.5 c
+642.93 289.5 661.062 279.426 661.062 267 c
+s
+Q
+q
+W
+583.25 289.5 m
+657.75 289.5 l
+657.75 256.5 l
+583.25 256.5 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 590.25 271.5 Tm
+(downsample) Tj
+1 0 0 1 610.062 259.5 Tm
+(by 8) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+580.25 265.5 m
+567.25 260.75 l
+567.25 265.5 l
+567.25 270.25 l
+580.25 265.5 l
+f*
+580.25 265.5 m
+580.5 265.5 l
+580.5 265.25 l
+567.5 260.5 l
+567.25 260.5 l
+567.25 260.75 l
+f
+0.25 w
+567.375 265.5 m
+567.375 260.5 l
+S
+567.375 270.25 m
+567.375 265.25 l
+S
+567.25 270.25 m
+567.5 270.25 l
+580.5 265.5 l
+580.5 265.25 l
+580.25 265.25 l
+567.25 270 l
+f
+1 w
+552.75 265.5 m
+567.75 265.5 l
+S
+688.312 265.5 m
+675.312 260.75 l
+675.312 265.5 l
+675.312 270.25 l
+688.312 265.5 l
+f*
+688.312 265.5 m
+688.562 265.5 l
+688.562 265.25 l
+675.562 260.5 l
+675.312 260.5 l
+675.312 260.75 l
+f
+0.25 w
+675.438 265.5 m
+675.438 260.5 l
+S
+675.438 270.25 m
+675.438 265.25 l
+S
+675.312 270.25 m
+675.562 270.25 l
+688.562 265.5 l
+688.562 265.25 l
+688.312 265.25 l
+675.312 270 l
+f
+1 w
+660.812 265.5 m
+675.812 265.5 l
+S
+1 g
+553.562 208.5 m
+553.562 195.797 535.206 185.5 512.562 185.5 c
+489.919 185.5 471.562 195.797 471.562 208.5 c
+471.562 221.203 489.919 231.5 512.562 231.5 c
+535.206 231.5 553.562 221.203 553.562 208.5 c
+f
+553.062 208.5 m
+553.062 196.074 534.93 186 512.562 186 c
+490.195 186 472.062 196.074 472.062 208.5 c
+472.062 220.926 490.195 231 512.562 231 c
+534.93 231 553.062 220.926 553.062 208.5 c
+s
+Q
+q
+W
+475.25 231 m
+549.75 231 l
+549.75 198 l
+475.25 198 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 491.75 213 Tm
+(complex) Tj
+1 0 0 1 488.812 201 Tm
+(band shift) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+472.25 207 m
+459.25 202.25 l
+459.25 207 l
+459.25 211.75 l
+472.25 207 l
+f*
+472.25 207 m
+472.5 207 l
+472.5 206.75 l
+459.5 202 l
+459.25 202 l
+459.25 202.25 l
+f
+0.25 w
+459.375 207 m
+459.375 202 l
+S
+459.375 211.75 m
+459.375 206.75 l
+S
+459.25 211.75 m
+459.5 211.75 l
+472.5 207 l
+472.5 206.75 l
+472.25 206.75 l
+459.25 211.5 l
+f
+1 w
+444.75 207 m
+459.75 207 l
+S
+1 g
+661.562 208.5 m
+661.562 195.797 643.206 185.5 620.562 185.5 c
+597.919 185.5 579.562 195.797 579.562 208.5 c
+579.562 221.203 597.919 231.5 620.562 231.5 c
+643.206 231.5 661.562 221.203 661.562 208.5 c
+f
+661.062 208.5 m
+661.062 196.074 642.93 186 620.562 186 c
+598.195 186 580.062 196.074 580.062 208.5 c
+580.062 220.926 598.195 231 620.562 231 c
+642.93 231 661.062 220.926 661.062 208.5 c
+s
+Q
+q
+W
+583.25 231 m
+657.75 231 l
+657.75 198 l
+583.25 198 l
+h
+n
+BT
+/R96 12 Tf
+1 0 0 1 590.25 213 Tm
+(downsample) Tj
+1 0 0 1 610.062 201 Tm
+(by 8) Tj
+ET
+Q
+q
+W
+31 582 m
+761 582 l
+761 30 l
+31 30 l
+h
+n
+1 i
+580.25 207 m
+567.25 202.25 l
+567.25 207 l
+567.25 211.75 l
+580.25 207 l
+f*
+580.25 207 m
+580.5 207 l
+580.5 206.75 l
+567.5 202 l
+567.25 202 l
+567.25 202.25 l
+f
+0.25 w
+567.375 207 m
+567.375 202 l
+S
+567.375 211.75 m
+567.375 206.75 l
+S
+567.25 211.75 m
+567.5 211.75 l
+580.5 207 l
+580.5 206.75 l
+580.25 206.75 l
+567.25 211.5 l
+f
+1 w
+552.75 207 m
+567.75 207 l
+S
+688.312 207 m
+675.312 202.25 l
+675.312 207 l
+675.312 211.75 l
+688.312 207 l
+f*
+688.312 207 m
+688.562 207 l
+688.562 206.75 l
+675.562 202 l
+675.312 202 l
+675.312 202.25 l
+f
+0.25 w
+675.438 207 m
+675.438 202 l
+S
+675.438 211.75 m
+675.438 206.75 l
+S
+675.312 211.75 m
+675.562 211.75 l
+688.562 207 l
+688.562 206.75 l
+688.312 206.75 l
+675.312 211.5 l
+f
+1 w
+660.812 207 m
+675.812 207 l
+S
+Q
+q
+W
+533.75 380.5 m
+598.25 380.5 l
+598.25 347.5 l
+533.75 347.5 l
+h
+n
+BT
+/R99 12 Tf
+1 0 0 1 540.5 362.5 Tm
+(48 MB/sec) Tj
+1 0 0 1 554.812 350.5 Tm
+(each) Tj
+ET
+Q
+endstream
+endobj
+101 0 obj
+9596
+endobj
+90 0 obj
+<<
+/Type /Page
+/MediaBox [0 0 792 612]
+/Parent 2 0 R
+/Resources << /ProcSet [/PDF /Text]
+/Font <<
+/R99 99 0 R
+/R96 96 0 R
+/R93 93 0 R
+>>
+>>
+/Contents [
+91 0 R
+94 0 R
+97 0 R
+100 0 R
+]
+>>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [
+3 0 R
+9 0 R
+18 0 R
+27 0 R
+36 0 R
+45 0 R
+54 0 R
+63 0 R
+72 0 R
+81 0 R
+90 0 R
+] /Count 11
+>>
+endobj
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R
+>>
+endobj
+102 0 obj
+<< /CreationDate (D:19980224112033)
+/Producer (Aladdin Ghostscript 5.03)
+>>
+endobj
+xref
+0 103
+0000000000 65535 f 
+0000047407 00000 n 
+0000047278 00000 n 
+0000001012 00000 n 
+0000000015 00000 n 
+0000000468 00000 n 
+0000000487 00000 n 
+0000000568 00000 n 
+0000000993 00000 n 
+0000002879 00000 n 
+0000001170 00000 n 
+0000001625 00000 n 
+0000001645 00000 n 
+0000001728 00000 n 
+0000001910 00000 n 
+0000001930 00000 n 
+0000002014 00000 n 
+0000002859 00000 n 
+0000004591 00000 n 
+0000003060 00000 n 
+0000003515 00000 n 
+0000003535 00000 n 
+0000003618 00000 n 
+0000003800 00000 n 
+0000003820 00000 n 
+0000003904 00000 n 
+0000004571 00000 n 
+0000006536 00000 n 
+0000004773 00000 n 
+0000005228 00000 n 
+0000005248 00000 n 
+0000005331 00000 n 
+0000005517 00000 n 
+0000005537 00000 n 
+0000005621 00000 n 
+0000006516 00000 n 
+0000013882 00000 n 
+0000006718 00000 n 
+0000007181 00000 n 
+0000007201 00000 n 
+0000007284 00000 n 
+0000007936 00000 n 
+0000007956 00000 n 
+0000008040 00000 n 
+0000013861 00000 n 
+0000016828 00000 n 
+0000014064 00000 n 
+0000014519 00000 n 
+0000014539 00000 n 
+0000014622 00000 n 
+0000014823 00000 n 
+0000014843 00000 n 
+0000014927 00000 n 
+0000016807 00000 n 
+0000021020 00000 n 
+0000017010 00000 n 
+0000017465 00000 n 
+0000017485 00000 n 
+0000017568 00000 n 
+0000017770 00000 n 
+0000017790 00000 n 
+0000017874 00000 n 
+0000020999 00000 n 
+0000025876 00000 n 
+0000021202 00000 n 
+0000021657 00000 n 
+0000021677 00000 n 
+0000021760 00000 n 
+0000021939 00000 n 
+0000021959 00000 n 
+0000022043 00000 n 
+0000025855 00000 n 
+0000027911 00000 n 
+0000026058 00000 n 
+0000026513 00000 n 
+0000026533 00000 n 
+0000026616 00000 n 
+0000026816 00000 n 
+0000026836 00000 n 
+0000026920 00000 n 
+0000027891 00000 n 
+0000029535 00000 n 
+0000028093 00000 n 
+0000028548 00000 n 
+0000028568 00000 n 
+0000028651 00000 n 
+0000028833 00000 n 
+0000028853 00000 n 
+0000028937 00000 n 
+0000029515 00000 n 
+0000047076 00000 n 
+0000029717 00000 n 
+0000030172 00000 n 
+0000030192 00000 n 
+0000030275 00000 n 
+0000030458 00000 n 
+0000030478 00000 n 
+0000030562 00000 n 
+0000037296 00000 n 
+0000037317 00000 n 
+0000037402 00000 n 
+0000047054 00000 n 
+0000047456 00000 n 
+trailer
+<< /Size 103 /Root 1 0 R /Info 102 0 R
+>>
+startxref
+47549
+%%EOF
