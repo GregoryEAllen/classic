@@ -1,0 +1,131 @@
+                   Electronic submission for the
+    32nd Asilomar Conference on Signals, Systems, and Computers
+                  mailto:submitAS@ece.nps.navy.mil
+
+1. Paper title
+
+    Real-time Sonar Beamforming on a Symmetric Multiprocessing
+    UNIX Workstation Using POSIX Pthreads and Process Networks
+
+2. Keywords
+
+    7. DSP hardware & software
+    8. Radar & sonar
+    5. Sensor array processing & data fusion
+
+Please note:
+   This paper is an invited paper for the DSP Hardware and Softare
+   session entitled "System-Level Design Methods, Tools, and Case
+   Studies" being chaired by Prof. Brian L. Evans.
+
+3. Authors and affiliations
+
+    Gregory E. Allen
+    Applied Research Laboratories: The University of Texas at Austin
+    P.O. Box 8029, Austin, TX 78713-8029
+    gallen@arlut.utexas.edu
+
+    Brian L. Evans
+    Dept. of Electrical and Computer Engineering
+    The University of Texas at Austin, Austin, TX 78712-1084
+    bevans@ece.utexas.edu
+
+4,5. Point of contact (POC)
+
+    Gregory E. Allen
+    Applied Research Laboratories: The University of Texas at Austin
+    P.O. Box 8029, Austin, TX 78713-8029
+    (512) 835-3487 (voice)
+    (512) 835-3259 (fax)
+    gallen@arlut.utexas.edu
+    http://www.ece.utexas.edu/~allen/
+
+6. Paper abstract
+
+    Traditionally, expensive custom hardware has been required to implement
+    data-intensive sonar beamforming algorithms in real-time. We develop a
+    sonar beamformer in software by merging the following recent
+    technologies: (1) symmetric multiprocessing on Unix workstations,
+    (2) lightweight POSIX threads, and (3) the Process Network model of
+    computation.  We find that it is feasible for a 4-GFLOP digital
+    interpolation process network beamformer to run in real-time on a Sun
+    workstation with 16 UltraSPARC-II processors running at 300 MHz. The
+    workstation beamformer significantly reduces cost and development time
+    over an equivalent hardware beamformer.
+
+7. Extended summary (500 to 1000 words) -- currently 660 words
+
+    A beamformer is a spatial filter that operates on the output of an array
+    of sensors in order to enhance the amplitude of a coherent wavefront
+    relative to background noise and directional interference. Time-domain
+    beamforming delays and adds weighted outputs of an array of transducers.
+    A digital implementation is created by sampling the output of each
+    sensor element in time. These sets of discrete samples are again delayed
+    and summed in the beamforming operation. Typically, the delay resolution
+    required for beam steering is much greater than that given by the
+    Nyquist sample rate. In digital interpolation beamforming, the desired
+    time-delay quantization is achieved by digital interpolation of data
+    sampled slightly above the Nyquist rate.
+    
+    Traditionally, custom hardware has been required to implement
+    processing-intensive sonar beamforming algorithms in real-time. However,
+    the performance of today’s symmetric multiprocessing UNIX workstations
+    makes it possible to implement these algorithms at a fraction of the
+    development and manufacturing costs of a custom hardware solution. In
+    order to facilitate the implementation, a reliable formal design
+    methodology for organizing and developing real-time multiprocessor
+    software is needed. We develop a sonar beamformer in software by merging
+    the following recent technologies: (1) symmetric multiprocessing on Unix
+    workstations, (2) lightweight POSIX threads, and (3) the Process Network
+    model of computation.
+    
+    The Process Network model of computation is a key part of our design
+    methodology, and is natural for capturing the concurrency and
+    parallelism in signal processing systems. The model represents a program
+    in directed graph notation, where each node represents an independent
+    process and each edge represents a one-way FIFO queue of data to be
+    communicated. This model provides for correctness, and guarantees
+    determinate execution of the program regardless of the scheduling
+    algorithm used. Dynamic scheduling based on the availability of data
+    allows execution in bounded memory. This bounded memory Process Network
+    model is well-suited for implementation using the thread model of
+    concurrent programming.
+    
+    The Portable Operating System Interface (POSIX) is a recent standard
+    with the goal of providing source-code portability across many UNIX
+    platforms. Implementing the Process Network model with POSIX threads
+    (Pthreads) gives a low-overhead, high-performance, scalable framework.
+    Symmetric multiprocessing guarantees efficient utilization of multiple
+    processors, as scheduling of Pthreads is dynamically handled by the
+    operating system. POSIX optionally allows Pthreads to be scheduled with
+    real-time priority.
+    
+    Our Process Network framework was developed in C++ on Sun Solaris
+    workstations. A core component of our implementation is the
+    high-performance Process Network queue class. This queue class is
+    intended to make up for the lack of circular address buffers on general
+    purpose processors, and to adhere to the scheduling rules for bounded
+    execution of a computation graph: (1) consumer threads block when
+    attempting to read from a queue with insufficient data, and (2) producer
+    threads block when attempting to write to a queue which is full. To
+    reduce data copying, both producers and consumers operate directly out
+    of queue memory.
+    
+    We compare the performance of batch-mode and Process Network
+    beamformers, in order to evaluate Process Network overhead. We implement
+    a multi-fan digital interpolation beamformer using a Process Network,
+    and find that it is feasible for this 4-GFLOP algorithm to run in
+    real-time on a Sun workstation with 16 UltraSPARC-II processors running
+    at 300 MHz. The software beamformer reduces manufacturing costs,
+    development costs, and development time by a factor of three, and volume
+    and weight by a factor two, over an equivalent modern hardware
+    beamformer.
+    
+    Although our Process Network implementation has been applied to digital
+    interpolation beamforming, this is not its only possible use -- many
+    processing-intensive DSP algorithms could benefit from this methodology.
+    Design and verification can be performed on less powerful workstations,
+    with reasonable assuredness that performance will increase linearly with
+    the number of CPUs, taking advantage of the parallelism that exists in
+    the algorithms. Systems developed in this manner would be deployable and
+    real-time capable when given sufficient computing resources.

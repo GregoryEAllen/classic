@@ -1,0 +1,185 @@
+                 Electronic submission for the
+    33rd Asilomar Conference on Signals, Systems, and Computers
+                mailto:submitAS@ece.nps.navy.mil
+
+1. Paper title
+
+    Real-Time High-Throughput Sonar Beamforming Kernels Using
+    Native Signal Processing and Memory Latency Hiding Techniques
+
+2. Keywords
+
+    7. DSP hardware & software
+    8. Radar & sonar
+    5. Sensor array processing & data fusion
+
+3. Authors and affiliations
+
+    Mr. Gregory E. Allen
+    Applied Research Laboratories
+    The University of Texas at Austin
+    P.O. Box 8029
+    Austin, TX 78713-8029
+    gallen@arlut.utexas.edu
+
+    Prof. Brian L. Evans
+    Dept. of Electrical and Computer Engineering
+    The University of Texas at Austin
+    Austin, TX 78712-1084
+    bevans@ece.utexas.edu
+
+4,5. Point of contact (POC)
+
+    Gregory E. Allen
+    Applied Research Laboratories
+    The University of Texas at Austin
+    P.O. Box 8029
+    Austin, TX 78713-8029
+    (512) 835-3487 (voice)
+    (512) 835-3259 (fax)
+    gallen@arlut.utexas.edu
+    http://www.ece.utexas.edu/~allen/
+
+6. Paper abstract
+
+    We evaluate the use of native signal processing with loop unrolling and
+    software prefetching to achieve high-performance digital signal
+    processing on general-purpose processors.  We apply these techniques to
+    minimize the number of processors necessary for real-time implementation
+    of a 3-D sonar beamformer.  Because our beamforming kernels operate on
+    high-throughput (~100 MB/s) input/output streams, memory latency hiding
+    techniques are key for maximum performance.  On the Sun UltraSPARC-II
+    processor, we find speedups of 2.4 for hand loop unrolling, 1.46 for the
+    Visual Instruction Set over floating-point arithmetic in C, and 1.33 for
+    software prefetching.
+
+7. Extended summary
+
+    Modern general-purpose processors support high-performance digital
+    signal processing on workstations, e.g. through the use of native signal
+    processing (NSP) [1-3].  Single-cycle multiply-accumulates (MACs), which
+    have traditionally been available only on digital signal processors (DSPs),
+    are now commonly available in general-purpose processors.  Several
+    manufacturers have also added single-instruction multiple-data extensions
+    to enhance performance in multimedia applications, e.g. the Visual
+    Instruction Set (VIS) in the Sun Microsystems UltraSPARC processor [2,4].
+
+    Sonar beamforming and synthetic aperture radar imaging systems are
+    high-throughput applications that require billions of MACs/s and
+    100 MB/s of input/output data.  For such high-throughput applications,
+    real-time implementations were initially in custom hardware and more
+    recently in commercial off-the-shelf (COTS) components [5].  NSP makes
+    a real-time implementation on commodity multiprocessor workstations
+    possible at a fraction of the development and manufacturing costs of
+    custom hardware and COTS solutions [6].
+
+    To demonstrate the use of NSP for real-time implementations, we evaluate
+    two key time-domain kernels for 3-D sonar beamforming: a horizontal
+    digital interpolation beamformer [7] and a multi-fan vertical beamformer.
+    The vertical kernel accepts 16-bit data arriving at 100 MB/s, and
+    performs integer-to-floating-point conversion and multiple dot products.
+    We compare floating-point and VIS realizations.  The horizontal kernel
+    accepts 32-bit single-precision floating-point data, and performs index
+    lookup and digital interpolation.  We implement it in single-precision
+    floating-point arithmetic. These kernels represent the computational
+    bottlenecks in a 3-D sonar system.
+
+    VIS is specifically optimized for graphics and image processing, but
+    should also allow substantial performance for fixed-point 1-D signal
+    processing. VIS treats a 64-bit register as 2, 4, or 8 partitioned data
+    words, and performs operations on multiple words with a single
+    instruction. For this paper, we require the highest precision (and
+    slowest) of the VIS modes for the vertical beamformer -- signed 16-bit
+    by 16-bit multiplies with a signed 32-bit accumulator. The peak
+    performance for this mode is one MAC operation every two clock cycles.
+    Although this is half of the peak floating-point performance, it is much
+    faster than converting the sensor data to floating-point and performing
+    the floating-point operations.
+
+    Even with processor NSP performance advances, access to high-latency
+    main memory can cause the processor to stall. The stream-oriented nature
+    of real-time signal processing algorithms amplifies this problem because
+    of the high data throughput to memory. Memory latency hiding techniques
+    [8] such as loop unrolling, software pipelining, and software
+    prefetching [9-11] can be used to help alleviate this bottleneck. Because
+    these beamforming kernels involve large, continuous streams of data,
+    memory latency hiding techniques are necessary for maximum performance.
+
+    We use Sun's SPARCompiler5.0 Developer Release to compile the kernels.
+    We also utilize several performance evaluation tools from Sun to provide
+    useful insights into kernel performance. These tools include Shade
+    instruction simulators, INCAS (It's a Near Cycle Accurate Simulator),
+    and the UltraSPARC performance instrumentation counters. We explore
+    several different kernel implementations in the design space and compare
+    performance results on a 336 MHz UltraSPARC-II processor.
+
+    In the horizontal beamformer, we find that hand-coded loop unrolling
+    gives a speedup of 2.4. This kernel achieves 444.3 MFLOPS, which is
+    66% of peak. In the vertical beamformer, we find that VIS offers a 46%
+    performance boost over a floating-point implementation, and that
+    software prefetching gives an additional 34% performance gain by
+    reducing both load and store stalls. For the vertical beamformer, we
+    achieve 313.3 MIOPS, which is 93% of peak.
+
+           Kernel  | Performance  | Data rates (MBytes/sec)
+        -----------|--------------|---------------------------
+          Vertical | 313.3 MIOPS  | 104.4  input, 62.7  output
+        Horizontal | 444.3 MFLOPS |  11.65 input,  8.89 output
+
+    We find that horizontal beamforming kernel is computationally limited
+    whereas the vertical beamforming kernel is input/output limited.
+
+    We find that loop unrolling as a means for memory latency hiding and
+    increased instruction-level parallelism provides excellent results in
+    both kernels, and that the use of VIS and software prefetching can
+    result in excellent performance gains. However, prefetch instructions
+    are not automatically generated, and low-level programming with VIS or
+    prefetch instructions can be difficult and time consuming.
+
+    The specific contributions of this paper follow:
+
+    - An evaluation of native signal processing for real-time implementation
+      of a high-throughput application
+    - A demonstration of software prefetching with high-throughput data
+      (not a simulation)
+    - A case study that shows achievable near-peak performance
+    - A comparison of fixed-point native signal processing vs. floating-point
+      arithmetic in a general-purpose processor
+    - An evaluation of current compiler and performance evaluation tools
+    - Freely distributable real-time beamforming kernels
+
+
+ [1] P. Lapsley, "NSP Shows Promise on Pentium, PowerPC," MicroProcessor
+     Report, 1995.
+ [2] W. Chen, H. J. Reekie, S. Bhave, and E. A. Lee, "Native Signal
+     Processing on the UltraSparc in the Ptolemy Environment," Proc. IEEE
+     Asilomar Conf. on Signals, Systems, and Computers, Nov. 1-4, 1996,
+     vol. 2, pp. 1368-1372.
+ [3] R. Bhargava, R. Radhakrishnan, B. L. Evans, and L. K. John,
+     "Evaluating MMX Technology Using DSP and Multimedia Applications,"
+     Proc. IEEE Int. Sym. on Microarchitecture, Nov. 30-Dec. 2, 1998,
+     Dallas, TX, pp. 37-46.
+ [4] Visual Instruction Set User's Guide, Sun Microsystems, 1995.
+ [5] K. Watkins, "Optimal Architectures for Massively Parallel
+     Implementation of Hard Real-Time Beamformers",
+     Proc. IEEE Asilomar Conf. on Signals, Systems, and Computers,
+     Nov. 1-4, 1998.
+ [6] G. Allen, B. L. Evans, and D. C. Schanbacher, "Real-Time Sonar
+     Beamforming on a Unix Workstation Using Process Networks and POSIX
+     Pthreads", Proc. IEEE Asilomar Conf. on Signals, Systems, and
+     Computers, Nov. 1-4, 1998.
+ [7] R. G. Pridham and R. A. Mucci, "A Novel Approach to Digital
+     Beamforming," Journal Acoustical Society of America, vol. 63, no. 2,
+     pp.  425-434, Feb. 1978.
+ [8] L. John, V. Reddy, P. Hulina, and L. Coraor, "A Comparative Evaluation
+     of Software Techniques to Hide Memory Latencies," Proc. IEEE Hawaii
+     Int. Conf. on System Sciences, vol. I, pp. 229-238, Jan. 1995.
+ [9] D. Callahan, K. Kennedy, and A. Porterfield, "Software Prefetching,"
+     Proc. ACM Int. Conf. on Architectural Support for Programming Languages
+     and Operating Systems, pp. 40-52, Apr. 1991.
+[10] K. Bala, M. F. Kaashoek, and W. E. Weihl, "Software Prefetching and
+     and Caching for Translation Lookaside Buffers," USENIX Sym. on
+     Operating Systems Design and Implementation, Nov. 1994, pp. 243-253.
+[11] F. J. Sanchez and A. Gonzalez, "Software Prefetching for Software
+     Pipelined Loops," Proc. Hawaii Int. Conf on. System Sciences,
+     vol. 7, pp. 778-9, Jan. 1998.
