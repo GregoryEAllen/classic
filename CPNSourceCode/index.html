@@ -1,18 +1,54 @@
 <HTML>
-<!--This file created by Claris Home Page version 3.0-->
+<!--This file created 3/29/00 10:30 PM by Claris Home Page version 3.0-->
 <HEAD>
    <TITLE>Process Network Source Code</TITLE>
    <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
-   <X-CLARIS-WINDOW TOP=41 BOTTOM=956 LEFT=11 RIGHT=613>
+   <X-CLARIS-WINDOW TOP=43 BOTTOM=755 LEFT=4 RIGHT=567>
    <X-CLARIS-REMOTESAVE SERVER=syrinx USER=gallen DIR="Documents/public_html/" FILE="index.html">
    <X-CLARIS-TAGVIEW MODE=minimal>
 </HEAD>
 <BODY BACKGROUND="Graphics/LonghornPattern.gif">
 <CENTER><IMG SRC="../Graphics/warning.gif" WIDTH=488 HEIGHT=11 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
 
-<H1><CENTER>Computational Process Networks Source Code</CENTER></H1>
+<H1><CENTER>Computational Process Network Source Code</CENTER></H1>
 
-<CENTER><IMG SRC="../Graphics/warning.gif" WIDTH=488 HEIGHT=11 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom>
+<CENTER><IMG SRC="../Graphics/warning.gif" WIDTH=488 HEIGHT=11 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+
+<BLOCKQUOTE>Computational Process Networks is a model and a framework
+   library for real-time high-throughput signal and image processing
+   on symmetric multiprocessing workstations. The model combines:
+   
+   <UL>
+      <LI>Process Networks &#91;1&#93;, a formal, concurrent model
+      for functional parallelism</LI>
+      
+      <LI>Bounded Scheduling &#91;2&#93; for realization in finite
+      memory</LI>
+      
+      <LI>Firing Thresholds from Computation Graphs &#91;3&#93;</LI>
+   </UL>
+   
+   <P>Computational Process Networks model algorithms on overlapping
+   continuous streams of data (such as digital filters and
+   overlap-and-save fast Fourier transforms), and provides liveness
+   and determinate execution. Our C++ implementation provides a
+   portable, high-performance, scalable framework using POSIX
+   Threads.</P>
+   
+   <P>The March 2000 issue of <I>IEEE Transactions on Signal
+   Processing</I> contains a paper <A HREF="../TransSP-Mar00/index.html">&#91;4&#93;</A>
+   which prototypes a 3-D sonar beamfomer using Computational Process
+   Networks. The beamfomer sustains a real-time 4 GFLOPS on a Sun
+   Ultra Enterprise 4000 with 12 336 MHz UltraSPARC-II
+   processors.</P>
+   
+   <P>The Computational Process Network source code is publicly
+   available, under the <A HREF="http://www.gnu.org/">GNU</A>
+   <A HREF="http://www.gnu.org/copyleft/gpl.html">GPL</A>.</P></BLOCKQUOTE>
+
+<CENTER>
+
+<HR>
 
 <P>We use <A HREF="http://www.arlut.utexas.edu/~jmake/">jmake</A>, an
 automated, multi-platform build tool. You'll need it,
@@ -32,7 +68,7 @@ too.</P></CENTER>
    only been tested on Solaris, Linux, and LinuxPPC (but may work on
    others).</P>
    
-   <P>3/22/00 - This version has had a significant rewrite, with the
+   <P>3/29/00 - This version has had a significant rewrite, with the
    following features:</P>
    
    <UL>
@@ -58,11 +94,37 @@ too.</P></CENTER>
 
 <HR>
 
+</CENTER>
+
+<OL>
+   <LI>G. Kahn, "The Semantics of a Simple Language for Parallel
+   Programming," <I>Information Processing</I>, pp. 471-475,
+   Stockholm, Aug. 1974.</LI>
+   
+   <LI>T. M. Parks, "Bounded Scheduling of Process Networks,"
+   <I>Technical Report UCB/ERL-95-105</I>, Ph.D. Dissertation, EECS
+   Department, University of California, Berkeley, CA 94720-1770,
+   Dec. 1995.</LI>
+   
+   <LI>R. M. Karp and R. E. Miller, "Properties of a Model for
+   Parallel Computations: Determinacy, Termination, Queueing,"
+   <I>SIAM Journal</I>, vol. 14, pp. 1390-1411, Nov. 1966.</LI>
+   
+   <LI>G. E. Allen and B. L. Evans, "<A HREF="../TransSP-Mar00/index.html">Real-Time
+   Sonar Beamforming on a Unix Workstation Using Process Networks and
+   POSIX Threads</A>", <I>IEEE Transactions on Signal Processing</I>,
+   pp. 921-926, March 2000.</LI>
+</OL>
+
+<CENTER>
+
+<HR>
+
 <P>For more information contact: <A HREF="http://www.ece.utexas.edu/~allen/">Greg
 Allen</A> <A HREF="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</A></P>
 
 <P><A HREF="../AccessStatistics.html"><IMG SRC="http://nub.arlut.utexas.edu/cgi-bin/VersaCounter/vcounter?page=PNSourceCode&amp;block=0" WIDTH=75 HEIGHT=20 BORDER=0 ALIGN=bottom></A></P>
 
-<P>&nbsp;$Id: index.html,v 1.1 2000/03/22 16:21:09 gallen Exp $</P></CENTER>
+<P>&nbsp;$Id: index.html,v 1.2 2000/03/30 04:33:37 gallen Exp $</P></CENTER>
 </BODY>
 </HTML>
