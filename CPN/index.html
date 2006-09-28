@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!--This file created 3/29/00 10:30 PM by Claris Home Page version 3.0-->
+  <title>Process Network Source Code</title>
+  <meta name="GENERATOR" content="Claris Home Page 3.0">
+  <x-claris-window top="43" bottom="755" left="4" right="567"></x-claris-window>
+  <x-claris-remotesave server="syrinx" user="gallen" dir=""
+ file="index.html"></x-claris-remotesave> <x-claris-tagview
+ mode="minimal"></x-claris-tagview>
+</head>
+<body background="Graphics/LonghornPattern.gif">
+<h1>
+<center>Computational Process Networks</center>
+</h1>
+<blockquote>Computational Process Networks is a model and a framework
+library for real-time high-throughput signal and image processing. The
+model combines:
+  <ul>
+    <li>Process Networks [1], a formal, concurrent model for functional
+parallelism</li>
+    <li>Bounded Scheduling [2] for realization in finite memory</li>
+    <li>Firing Thresholds from Computation Graphs [3]</li>
+  </ul>
+  <p>Computational Process Networks model algorithms on overlapping
+continuous streams of data (such as digital filters and
+overlap-and-save fast Fourier transforms), and provides liveness and
+determinate execution. Our C++ implementation provides a portable,
+high-performance, scalable framework using POSIX Threads.</p>
+  <p>The March 2000 issue of <i>IEEE Transactions on Signal Processing</i>
+contains a paper <a
+ href="file:///Users/allen/Sites/public_html/TransSP-Mar00/index.html">[4]</a>
+which prototypes a 3-D sonar beamfomer using Computational Process
+Networks. The beamfomer sustains a real-time 4 GFLOPS on a Sun Ultra
+Enterprise 4000 with 12 336 MHz UltraSPARC-II processors.</p>
+  <p>The Computational Process Network source code is publicly
+available, under the <a href="http://www.gnu.org/">GNU</a> <a
+ href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.</p>
+Original releases of CPN worked only on symmetric multiprocessing
+workstations. It is <a href="../CPNSourceCode">available here</a>.<br>
+  <br>
+We are in the process of a complete rewrite of the CPN framework,
+adding the capability for execution on a distributed network of
+computers, as well as distributed dynamic deadlock detection and
+resolution (D4R). D4R algorithm examples are <a href="../D4R/">available
+here</a>.<br>
+</blockquote>
+<center>
+<hr><br>
+<div style="text-align: left; margin-left: 40px;">The rewritten CPN
+framework is currently in pre-release form.<br>
+</div>
+</center>
+<center>
+<hr></center>
+<ol>
+  <li>G. Kahn, "The Semantics of a Simple Language for Parallel
+Programming," <i>Information Processing</i>, pp. 471-475, Stockholm,
+Aug. 1974.</li>
+  <li>T. M. Parks, "Bounded Scheduling of Process Networks," <i>Technical
+Report UCB/ERL-95-105</i>, Ph.D. Dissertation, EECS Department,
+University of California, Berkeley, CA 94720-1770, Dec. 1995.</li>
+  <li>R. M. Karp and R. E. Miller, "Properties of a Model for Parallel
+Computations: Determinacy, Termination, Queueing," <i>SIAM Journal</i>,
+vol. 14, pp. 1390-1411, Nov. 1966.</li>
+  <li>G. E. Allen and B. L. Evans, "<a
+ href="../TransSP-Mar00/index.html">Real-Time Sonar Beamforming on a
+Unix Workstation Using Process Networks and POSIX Threads</a>", <i>IEEE
+Transactions on Signal Processing</i>, pp. 921-926, March 2000.</li>
+</ol>
+<center>
+<hr>
+<p>For more information contact: <a
+ href="http://www.ece.utexas.edu/%7Eallen/">Greg
+Allen</a> <a href="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</a></p>
+<p><a href="../AccessStatistics.html"><img
+ src="http://nub.arlut.utexas.edu/cgi-bin/VersaCounter/vcounter?page=PNSourceCode&amp;block=0"
+ width="75" height="20" border="0" align="bottom"></a></p>
+<p>&nbsp;$Id: index.html,v 1.1 2006/09/28 20:20:07 gallen Exp $</p>
+</center>
+</body>
+</html>
