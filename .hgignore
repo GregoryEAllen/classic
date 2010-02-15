@@ -5,4 +5,4 @@
 ^tailor.state$
 ^tailor.state.old$
 ^tailor.state.journal$
-^.DS_Store$
+.DS_Store$
