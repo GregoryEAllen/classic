@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 14 February 2006), see www.w3.org">
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
   <title>Process Network Source Code</title>
 </head>
 <body background="Graphics/LonghornPattern.gif">
@@ -15,29 +17,27 @@
       <li>Firing Thresholds from Computation Graphs [3]</li>
     </ul>
     <p>Computational Process Networks model algorithms on overlapping continuous streams of data (such as digital filters and overlap-and-save fast Fourier transforms), and provides liveness and determinate execution. Our C++ implementation provides a portable, high-performance, scalable framework using POSIX Threads.</p>
-    <p>The March 2000 issue of <i>IEEE Transactions on Signal Processing</i> contains a paper <a href="file:///Users/allen/Sites/public_html/TransSP-Mar00/index.html">[4]</a> which prototypes a 3-D sonar beamfomer using Computational Process Networks. The beamfomer sustains a real-time 4 GFLOPS on a Sun Ultra Enterprise 4000 with 12 336 MHz UltraSPARC-II processors.</p>
-    <p>The Computational Process Network source code is publicly available, under the <a href="http://www.gnu.org/">GNU</a> <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.</p>Original releases of CPN worked only on symmetric multiprocessing workstations. It is <a href="../CPNSourceCode">available here</a>.<br>
-    <br>
-    We are in the process of a complete rewrite of the CPN framework, adding the capability for execution on a distributed network of computers, as well as distributed dynamic deadlock detection and resolution (D4R). D4R algorithm examples are <a href="../D4R/">available here</a>.<br>
+    <p>The Computational Process Network source code is publicly available, under the <a href="http://www.gnu.org/">GNU</a> <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.</p>This is our first release after a major rewrite of portions of the CPN framework. Specific new features include:<br>
+    <ul>
+      <li>a distributed implementation targeting clusters of workstations</li>
+      <li>a CPN kernel for dynamic construction of CPN programs</li>
+      <li>extensive built-in unit testing</li>
+      <li>case studies to exercise this new framework</li>
+    </ul>This release should be considered beta quality software. It is <a href="cpn-release-20100212.tgz">available here</a>.<br>
   </blockquote>
-  <center>
-    <hr>
-    <br>
-    <div style="text-align: left; margin-left: 40px;">
-      The CPN framework source code is available <a href="https://webspace.utexas.edu/gallen/CPN/cpn-20061110.tgz">here</a>. It is currently in a pre-alpha state. We are working to make an updated release shortly.<br>
-    </div>
-  </center>
   <center>
     <hr>
   </center>
   <ol>
-    <li>G. Kahn, "The Semantics of a Simple Language for Parallel Programming," <i>Information Processing</i>, pp. 471-475, Stockholm, Aug. 1974.</li>
-    <li>T. M. Parks, "Bounded Scheduling of Process Networks," <i>Technical Report UCB/ERL-95-105</i>, Ph.D. Dissertation, EECS Department, University of California, Berkeley, CA 94720-1770, Dec. 1995.</li>
-    <li>R. M. Karp and R. E. Miller, "Properties of a Model for Parallel Computations: Determinacy, Termination, Queueing," <i>SIAM Journal</i>, vol. 14, pp. 1390-1411, Nov. 1966.</li>
-    <li>G. E. Allen and B. L. Evans, "<a href="../TransSP-Mar00/index.html">Real-Time Sonar Beamforming on a Unix Workstation Using Process Networks and POSIX Threads</a>", <i>IEEE Transactions on Signal Processing</i>, pp. 921-926, March 2000.</li>
+    <li>G. Kahn, "The Semantics of a Simple Language for Parallel Programming," <em>Information Processing</em>, pp. 471-475, Stockholm, Aug. 1974.</li>
+    <li>T. M. Parks, "Bounded Scheduling of Process Networks," <em>Technical Report UCB/ERL-95-105</em>, Ph.D. Dissertation, EECS Department, University of California, Berkeley, CA 94720-1770, Dec. 1995.</li>
+    <li>R. M. Karp and R. E. Miller, "Properties of a Model for Parallel Computations: Determinacy, Termination, Queueing," <em>SIAM Journal</em>, vol. 14, pp. 1390-1411, Nov. 1966.</li>
+    <li>G. E. Allen and B. L. Evans, "<a href="../TransSP-Mar00/index.html">Real-Time Sonar Beamforming on a Unix Workstation Using Process Networks and POSIX Threads</a>", <em>IEEE Transactions on Signal Processing</em>, pp. 921-926, March 2000.</li>
   </ol>
   <center>
     <hr>
+    <p style="text-align: left;">The original release of CPN worked only on symmetric multiprocessing workstations, and is <a href="../CPNSourceCode">available here</a>. It was used in a March 2000 paper <a href="../TransSP-Mar00/index.html">[4]</a> which prototypes a 3-D sonar beamfomer. The beamfomer sustains a real-time 4 GFLOPS on a Sun Ultra Enterprise 4000 with 12 336 MHz UltraSPARC-II processors.</p>
+    <hr style="width: 100%; height: 2px;">
     <p>For more information contact: <a href="http://www.ece.utexas.edu/%7Eallen/">Greg Allen</a> <a href="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</a></p>
   </center>
 </body>
