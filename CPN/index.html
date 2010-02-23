@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
   <title>Process Network Source Code</title>
 </head>
-<body background="Graphics/LonghornPattern.gif">
+<body style="background-image: url(Graphics/LonghornPattern.gif);">
   <center>
     <h1>Computational Process Networks</h1>
   </center>
@@ -17,14 +17,29 @@
       <li>Firing Thresholds from Computation Graphs [3]</li>
     </ul>
     <p>Computational Process Networks model algorithms on overlapping continuous streams of data (such as digital filters and overlap-and-save fast Fourier transforms), and provides liveness and determinate execution. Our C++ implementation provides a portable, high-performance, scalable framework using POSIX Threads.</p>
-    <p>The Computational Process Network source code is publicly available, under the <a href="http://www.gnu.org/">GNU</a> <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.</p>This is our first release after a major rewrite of portions of the CPN framework. Specific new features include:<br>
-    <ul>
-      <li>a distributed implementation targeting clusters of workstations</li>
-      <li>a CPN kernel for dynamic construction of CPN programs</li>
-      <li>extensive built-in unit testing</li>
-      <li>case studies to exercise this new framework</li>
-    </ul>This release should be considered beta quality software. It is <a href="cpn-release-20100212.tgz">available here</a>.<br>
+    <p>The Computational Process Network source code is publicly available, under the <a href="http://www.gnu.org/">GNU</a> <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.<br></p>
   </blockquote>
+  <hr style="width: 100%; height: 2px;">
+  <div style="margin-left: 40px;">
+    <a href="cpn-release-20100212.tgz"><span style="font-style: italic;">Release 20100212</span></a> - This is our third major release, and our first release in nearly 4 years. It is our first release after a major rewrite of portions of the CPN framework. Specific new features include:<br>
+  </div>
+  <ul style="margin-left: 40px;">
+    <li>a distributed implementation targeting clusters of workstations</li>
+    <li>a CPN kernel for dynamic construction of CPN programs</li>
+    <li>extensive built-in unit testing</li>
+    <li>case studies to exercise this new framework</li>
+  </ul>
+  <blockquote>
+    This release is still a work in progress and should be considered beta quality software. It contains nearly 140K lines of code in about 400 source files. This software for POSIX systems includes makefiles for Linux on i686 and x86_64, and MacOS X on i386.<br>
+  </blockquote>
+  <hr style="width: 100%; height: 2px;">
+  <div style="margin-left: 40px;">
+    <span style="font-style: italic;">Release 20061110</span> - This release branch never left pre-alpha state. It was our first release to include the <a href="../D4R/index.html">D4R algorithm</a>.<br>
+  </div>
+  <hr style="width: 100%; height: 2px;">
+  <div style="margin-left: 40px;">
+    <a href="../CPNSourceCode"><span style="font-style: italic;">Release 20000329</span></a> - The original release of CPN worked only on symmetric multiprocessing workstations. It was used in a March 2000 paper <a href="../TransSP-Mar00/index.html">[4]</a> which prototypes a 3-D sonar beamfomer. The beamfomer sustains a real-time 4 GFLOPS on a Sun Ultra Enterprise 4000 with 12 336 MHz UltraSPARC-II processors.
+  </div>
   <center>
     <hr>
   </center>
@@ -36,18 +51,19 @@
   </ol>
   <center>
     <hr>
-    <p style="text-align: left;">The original release of CPN worked only on symmetric multiprocessing workstations, and is <a href="../CPNSourceCode">available here</a>. It was used in a March 2000 paper <a href="../TransSP-Mar00/index.html">[4]</a> which prototypes a 3-D sonar beamfomer. The beamfomer sustains a real-time 4 GFLOPS on a Sun Ultra Enterprise 4000 with 12 336 MHz UltraSPARC-II processors.</p>
+    <p>Software Developers: <a href="http://users.ece.utexas.edu/%7Eallen/">Gregory E. Allen</a> and John F. Bridgman<br>
+    Research Guidance: <a href="http://users.ece.utexas.edu/%7Ebevans/">Brian L. Evans</a></p>This work is supported by the Independent Research and Development program at<br>
+    <a href="http://www.arlut.utexas.edu/">Applied Research Laboratories</a>: <a href="http://www.utexas.edu/">The University of Texas at Austin</a>.
     <hr style="width: 100%; height: 2px;">
     <p>For more information contact: <a href="http://www.ece.utexas.edu/%7Eallen/">Greg Allen</a> <a href="mailto:gallen@arlut.utexas.edu">&lt;gallen@arlut.utexas.edu&gt;</a></p>
-  </center>
-<script type="text/javascript">
+  </center><script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
+</script><script type="text/javascript">
 try {
 var pageTracker = _gat._getTracker("UA-13167684-1");
 pageTracker._trackPageview();
-} catch(err) {}</script>
+} catch(err) {}
+</script>
 </body>
 </html>
