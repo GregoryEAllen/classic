@@ -3,9 +3,9 @@
 <head>
   <meta name="generator" content="HTML Tidy for Mac OS X (vers 14 February 2006), see www.w3.org">
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <title>Process Network Source Code</title>
+  <title>Computational Process Networks</title>
 </head>
-<body style="background-image: url(Graphics/LonghornPattern.gif);">
+<body>
   <center>
     <h1>Computational Process Networks</h1>
   </center>
@@ -21,6 +21,26 @@
   </blockquote>
   <hr style="width: 100%; height: 2px;">
   <div style="margin-left: 40px;">
+    <a href="cpn-release-20101207.tgz"><span style="font-style: italic;">Release 20101207</span></a> - This is our fourth major release. Specific new features include:<br>
+  </div>
+  <ul style="margin-left: 40px;">
+    <li><a href="../D4R/index.html">D4R</a> - the distributed dynmaic deadlock detection and resolution algorithm<br></li>
+    <li>beamforming case study (used in <a href="http://users.ece.utexas.edu/%7Ebevans/papers/2010/multicore/">Asilomar 2010 paper</a>)</li>
+    <li>updated prime sieve case study</li>
+    <li>construction of CPN programs from XML and JSON descriptions</li>
+    <li>significant changes to the remote queue implementation</li>
+    <li>reorganization of layout to have a node library</li>
+    <li>Pseudo nodes - I/O endpoints to a CPN network embedded in another application</li>
+    <li>Functional nodes - templated nodes from functions or functional objects<br></li>
+    <li>improvements to the pthread library<br></li>
+    <li>general cleanup</li>
+    <li>bug fixes</li>
+  </ul>
+  <blockquote>
+    This release is still a work in progress and should be considered beta quality software. As estimated by <a href="http://cloc.sourceforge.net/">cloc</a>, it contains about 26K lines of code in about 330 source files. This software for POSIX systems includes makefiles for Linux on i686 and x86_64, and MacOS X on i386.<br>
+  </blockquote>
+  <hr style="width: 100%; height: 2px;">
+  <div style="margin-left: 40px;">
     <a href="cpn-release-20100212.tgz"><span style="font-style: italic;">Release 20100212</span></a> - This is our third major release, and our first release in nearly 4 years. It is our first release after a major rewrite of portions of the CPN framework. Specific new features include:<br>
   </div>
   <ul style="margin-left: 40px;">
@@ -29,9 +49,6 @@
     <li>extensive built-in unit testing</li>
     <li>case studies to exercise this new framework</li>
   </ul>
-  <blockquote>
-    This release is still a work in progress and should be considered beta quality software. It contains nearly 140K lines of code in about 400 source files. This software for POSIX systems includes makefiles for Linux on i686 and x86_64, and MacOS X on i386.<br>
-  </blockquote>
   <hr style="width: 100%; height: 2px;">
   <div style="margin-left: 40px;">
     <span style="font-style: italic;">Release 20061110</span> - This release branch never left pre-alpha state. It was our first release to include the <a href="../D4R/index.html">D4R algorithm</a>.<br>
@@ -51,7 +68,7 @@
   </ol>
   <center>
     <hr>
-    <p>Software Developers: <a href="http://users.ece.utexas.edu/%7Eallen/">Gregory E. Allen</a> and John F. Bridgman<br>
+    <p>Software Developers: <a href="https://webspace.utexas.edu/gallen/">Gregory E. Allen</a> and John F. Bridgman<br>
     Research Guidance: <a href="http://users.ece.utexas.edu/%7Ebevans/">Brian L. Evans</a></p>This work is supported by the Independent Research and Development program at<br>
     <a href="http://www.arlut.utexas.edu/">Applied Research Laboratories</a>: <a href="http://www.utexas.edu/">The University of Texas at Austin</a>.
     <hr style="width: 100%; height: 2px;">
