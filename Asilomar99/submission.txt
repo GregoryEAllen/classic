@@ -20,19 +20,19 @@
     The University of Texas at Austin
     P.O. Box 8029
     Austin, TX 78713-8029
-    gallen@arlut.utexas.edu
+    gallen AT arlut DOT utexas DOT edu
 
     Prof. Brian L. Evans
     Dept. of Electrical and Computer Engineering
     The University of Texas at Austin
     Austin, TX 78712-1084
-    bevans@ece.utexas.edu
+    bevans AT ece DOT utexas DOT edu
 
     Prof. Lizy K. John
     Dept. of Electrical and Computer Engineering
     The University of Texas at Austin
     Austin, TX 78712-1084
-    ljohn@ece.utexas.edu
+    ljohn AT ece DOT utexas DOT edu
 
 4,5. Point of contact (POC)
 
@@ -43,7 +43,8 @@
     Austin, TX 78713-8029
     (512) 835-3487 (voice)
     (512) 835-3259 (fax)
-    gallen@arlut.utexas.edu
+    gallen AT arlut DOT utexas DOT edu
+    http://gallen.bitbucket.org/
     http://www.ece.utexas.edu/~allen/
 
 6. Paper abstract
