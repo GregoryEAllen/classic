@@ -70,7 +70,7 @@ Please note:
     
     Traditionally, custom hardware has been required to implement
     processing-intensive sonar beamforming algorithms in real-time. However,
-    the performance of today’s symmetric multiprocessing UNIX workstations
+    the performance of today's symmetric multiprocessing UNIX workstations
     makes it possible to implement these algorithms at a fraction of the
     development and manufacturing costs of a custom hardware solution. In
     order to facilitate the implementation, a reliable formal design
