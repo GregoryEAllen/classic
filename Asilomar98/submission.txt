@@ -38,7 +38,7 @@ Please note:
     (512) 835-3487 (voice)
     (512) 835-3259 (fax)
     gallen AT arlut DOT utexas DOT edu
-    http://gallen.bitbucket.org/
+    https://gallen.bitbucket.io/
     http://www.ece.utexas.edu/~allen/
 
 6. Paper abstract
